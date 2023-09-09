@@ -33,5 +33,17 @@ public abstract class Hamburguesa{
 	public abstract void ponerQueso();
 	public abstract void prepararCarne();
 	public abstract void ponerCarne();
+
+	public void prepararHamburguesa(){
+		ponerPan();
+		ponerMayonesa();
+		ponerMostaza();
+		prepararCarne();
+		ponerCarne();
+		ponerQueso();
+		ponerVegetales();
+		ponerCatsup();
+		ponerPan();
+	}
 	
 }
