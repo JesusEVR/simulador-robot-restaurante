@@ -31,6 +31,7 @@ public abstract class Hamburguesa{
 
 	/**
 	 * Constructor por parametros de la hamburguesa
+         *
          * @param ID Cadena que contiene la ID de cada hamburguesa
 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
