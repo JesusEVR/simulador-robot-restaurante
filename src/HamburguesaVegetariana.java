@@ -1,3 +1,13 @@
+/**
+ * Clase que define las hamburguesas vegetarianas. Hereda de la clase absracta 'Hamburguesa'
+ *
+ * @author Supr-Lilito
+ * @author paolasanv
+ * @author JesusEVR
+ * @version septiembre 2023
+ *
+ */
+
 import java.util.Scanner;
 
 public class HamburguesaVegetariana extends Hamburguesa{
