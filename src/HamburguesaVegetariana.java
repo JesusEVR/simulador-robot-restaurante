@@ -44,7 +44,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
 		String o;
 		boolean seguir = true;
 			while(seguir){
-				System.out.println("¿Desea queso en su hamburguesa? Sí = s, No = n");
+				System.out.println("¿Desea queso vegetariano en su hamburguesa? Sí = s, No = n");
 				opcion = scan.nextLine();
 				o = opcion.toLowerCase();
 			
