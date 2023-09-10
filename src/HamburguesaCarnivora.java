@@ -47,15 +47,15 @@ public class HamburguesaCarnivora extends Hamburguesa{
 		boolean seguir = true;
 		
 			while(seguir){
-				System.out.println("¿Desea queso en su hamburguesa? Sí = s, No = n");
+				System.out.println("Dime papu, ¿quieres queso en tu hamburguesa? Sí = s, No = n");
 				opcion = scan.nextLine();
 				o = opcion.toLowerCase();
 			
 				if(o.equals("s")){
-				System.out.println("De acuerdo, con queso");
+				System.out.println("Le sabes. Sigues el ejemplo del gordo friki");
 					seguir = false;
 				}else if(o.equals("n")){
-					System.out.println("De acuerdo, sin queso");
+					System.out.println("No te preocupes, lince. No todos pueden tener buenos gustos :v");
 					seguir = false;
 				}	
 			}	
