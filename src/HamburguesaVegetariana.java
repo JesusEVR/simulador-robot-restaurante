@@ -23,15 +23,15 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	/**
 	 * Constructor por parametros de la hamburguesa vegetariana
          *
-         * @param ID Cadena que contiene la ID de cada hamburguesa
+         * @param id Cadena que contiene la ID de cada hamburguesa
 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
          * @param precio El costo de cada hamburguesa (en pesos mexicanos)
          * @param esVegetariano Un valor booleano que detalla si la hamburguesa es vgetariana (1) o no lo es (0)
 	 * @param tipoCarne El tipo de carne que tendra la hamburguesa
 	 */
-	public HamburguesaVegetariana(String ID, String nombre, String descripcion,double precio, boolean esVegetariano, String tipoCarne){
-		super(ID, nombre, descripcion, precio, esVegetariano);
+	public HamburguesaVegetariana(String id, String nombre, String descripcion,double precio, boolean esVegetariano, String tipoCarne){
+		super(id, nombre, descripcion, precio, esVegetariano);
 		this.tipoCarne = tipoCarne;
 	}
 
@@ -42,7 +42,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	public void ponerQueso(){
 		String opcion;
 		String o;
-		boolean seguir=true;
+		boolean seguir = true;
 			while(seguir){
 				System.out.println("¿Desea queso en su hamburguesa? Sí = s, No = n");
 				opcion = scan.nextLine();
@@ -50,10 +50,10 @@ public class HamburguesaVegetariana extends Hamburguesa{
 			
 				if(o.equals("s")){
 				System.out.println("De acuerdo, con queso");
-					seguir=false;
+					seguir = false;
 				}else if(o.equals("n")){
 					System.out.println("De acuerdo, sin queso");
-					seguir=false;
+					seguir = false;
 				}	
 			}	
 	}
