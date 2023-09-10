@@ -168,19 +168,19 @@ public abstract class Hamburguesa{
 	}
 
 	/**
-	 * Metodo abstracto que detalla que se esta poniendo el queso (vegano o no vegano) de la hamburguesa
+	 * Metodo abstracto que detalla que se esta poniendo el queso (vegetariano o no) de la hamburguesa
          *
 	 */
 	public abstract void ponerQueso();
 
 	/**
-	 * Metodo abstracto que detalla que se esta preparando la carne (vegana o no vegana) de la hamburguesa
+	 * Metodo abstracto que detalla que se esta preparando la carne (vegetariano o no) de la hamburguesa
          *
 	 */
 	public abstract void prepararCarne();
 
 	/**
-	 * Metodo abstracto que detalla que se esta poniendo la carne (vegana o no vegana) de la hamburguesa
+	 * Metodo abstracto que detalla que se esta poniendo la carne (vegetariano o no) de la hamburguesa
          *
 	 */
 	public abstract void ponerCarne();
