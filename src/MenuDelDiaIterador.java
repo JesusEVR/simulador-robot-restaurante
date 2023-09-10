@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  * Clase que implementa un iterador para el Menu del dia.
  * 
@@ -7,7 +8,7 @@
  * @version septiembre 2023
  *
  */
-import java.util.ArrayList;
+
 public class MenuDelDiaIterador implements Iterador{
 	ArrayList<Hamburguesa> hamburguesasDelDia;
 	int posicion = 0;

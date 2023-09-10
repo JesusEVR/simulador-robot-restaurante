@@ -1,3 +1,7 @@
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.NoSuchElementException;
+
 /**
  * Clase que implementa un iterador para el Menu de Lujo.
  * 
@@ -7,9 +11,6 @@
  * @version septiembre 2023
  *
  */
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.NoSuchElementException;
 public class MenuLujoIterador implements Iterador{
 	private Enumeration<Hamburguesa> numeracion;
 
@@ -18,7 +19,7 @@ public class MenuLujoIterador implements Iterador{
      * 
      * @param hamburguesasDeLujo Enumeracion de hamburguesas del menu de Lujo
      */
-	public MenuLujoIterador(Hashtable<Integer, Hamburguesa> hamburguesasDeLujo){
+	public MenuLujoIterador(Hashtable<String, Hamburguesa> hamburguesasDeLujo){
 		numeracion = hamburguesasDeLujo.elements();
 	}
 
