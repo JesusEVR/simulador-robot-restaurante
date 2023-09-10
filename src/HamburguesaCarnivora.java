@@ -23,7 +23,7 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	/**
 	 * Constructor por parametros de la hamburguesa
          *
-         * @param ID Cadena que contiene la ID de cada hamburguesa
+         * @param ID Cadena que contiene la ID de cada hamburguesa carnivora
 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
          * @param precio El costo de cada hamburguesa (en pesos mexicanos)
