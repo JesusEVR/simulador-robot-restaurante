@@ -58,7 +58,7 @@ public abstract class Hamburguesa{
 	/**
 	 * Metodo que cambia el ID de una hamburguesa
 	 * 
-	 * @param id La ID nueva de la hamburguesa
+	 * @param iD La ID nueva de la hamburguesa
 	 */
 	public void modificarID(String iD){
 		id = iD;
