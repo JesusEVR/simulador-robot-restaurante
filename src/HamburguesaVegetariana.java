@@ -44,15 +44,15 @@ public class HamburguesaVegetariana extends Hamburguesa{
 		String o;
 		boolean seguir = true;
 			while(seguir){
-				System.out.println("¿Desea queso vegetariano en su hamburguesa? Sí = s, No = n");
+				System.out.println("Dime papu, ¿quieres queso vegetariano en tu hamburguesa? Sí = s, No = n");
 				opcion = scan.nextLine();
 				o = opcion.toLowerCase();
 			
 				if(o.equals("s")){
-				System.out.println("De acuerdo, con queso");
+				System.out.println("Como desees bro :v");
 					seguir = false;
 				}else if(o.equals("n")){
-					System.out.println("De acuerdo, sin queso");
+					System.out.println("No pasa nada, lince. Igual estaba caducado xd");
 					seguir = false;
 				}	
 			}	
@@ -63,7 +63,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
          *
 	 */
 	public void prepararCarne(){
-		System.out.println("Preparando " +tipoCarne);
+		System.out.println("Preparando la carne de " +tipoCarne);
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
          *
 	 */
 	public void ponerCarne(){
-		System.out.println("Poniendo " +tipoCarne);
+		System.out.println("Poniendo la carne de " +tipoCarne);
 	}
 	
 }
