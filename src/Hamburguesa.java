@@ -132,7 +132,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerPan(){
-		System.out.println("Poniendo pan");
+		System.out.println("Colocando el pan, lince intergalactico");
 	}
 
 	/**
@@ -140,7 +140,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerMayonesa(){
-		System.out.println("Poniendo mayonesa");
+		System.out.println("Pongo la mayonesa, fantasmon. La favorita de Pedrito Sola :v");
 	}
 
 	/**
@@ -148,7 +148,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerMostaza(){
-		System.out.println("Poniendo mostaza");
+		System.out.println("Ahora la mostaza, el aderezo de los papus pro");
 	}
 
 	/**
@@ -156,7 +156,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerVegetales(){
-		System.out.println("Poniendo vegetales");
+		System.out.println("Tambien coloco los vegetales pibe, sin olvidarme de los pepinillos");
 	}
 
 	/**
@@ -164,7 +164,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerCatsup(){
-		System.out.println("Poniendo catsup");
+		System.out.println("El catsup igual te lo echo, a menos que prefieras clorox, lince");
 	}
 
 	/**
