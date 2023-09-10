@@ -14,7 +14,7 @@ public interface EstadoRobot{
 	 * Lo unico que puede hacer en este estado es activarse.
 	 *
 	 */
-    public void suspender();
+        public void suspender();
 
 	/**
 	 * Metodo que cambia el estado del Robot a "Activado".
@@ -49,5 +49,5 @@ public interface EstadoRobot{
 	 * Despues de enregar el pedido del cliente, regresa a su estado "Suspendido"
 	 *
 	 */
-    public void entregar();
+        public void entregar();
 }
