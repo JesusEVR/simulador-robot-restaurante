@@ -20,7 +20,6 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	 */
 	private String tipoCarne;
 
-
 	/**
 	 * Constructor por parametros de la hamburguesa vegetariana
          *
