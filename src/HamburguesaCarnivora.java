@@ -23,15 +23,15 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	/**
 	 * Constructor por parametros de la hamburguesa carnivora
          *
-         * @param ID Cadena que contiene la ID de cada hamburguesa
+         * @param id Cadena que contiene la ID de cada hamburguesa
 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
          * @param precio El costo de cada hamburguesa (en pesos mexicanos)
          * @param esVegetariano Un valor booleano que detalla si la hamburguesa es vgetariana (1) o no lo es (0)
 	 * @param tipoCarne El tipo de carne que tendra la hamburguesa
 	 */
-	public HamburguesaCarnivora(String ID, String nombre, String descripcion,double precio, boolean esVegetariano, String tipoCarne){
-		super(ID, nombre, descripcion, precio, esVegetariano);
+	public HamburguesaCarnivora(String id, String nombre, String descripcion,double precio, boolean esVegetariano, String tipoCarne){
+		super(id, nombre, descripcion, precio, esVegetariano);
 		this.tipoCarne = tipoCarne;
 	}
 
