@@ -11,7 +11,7 @@ public abstract class Hamburguesa{
         /**
 	 * ID unica de cada hambuguesa
 	 */
-	String ID;
+	String id;
 	/**
 	 * Nombre de la hamburguesa
 	 */
@@ -32,14 +32,14 @@ public abstract class Hamburguesa{
 	/**
 	 * Constructor por parametros de la hamburguesa
          *
-         * @param ID Cadena que contiene la ID de cada hamburguesa
+         * @param id Cadena que contiene la ID de cada hamburguesa
 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
          * @param precio El costo de cada hamburguesa (en pesos mexicanos)
          * @param esVegetariano Un valor booleano que detalla si la hamburguesa es vgetariana (1) o no lo es (0)
 	 */
-	public Hamburguesa(String ID, String nombre, String descripcion, double precio, boolean esVegetariano){
-		this.ID = ID;
+	public Hamburguesa(String id, String nombre, String descripcion, double precio, boolean esVegetariano){
+		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
@@ -52,7 +52,7 @@ public abstract class Hamburguesa{
 	 * @return la ID de dicha hamburguesa
 	 */
 	public String obtenerID(){
-		return ID;
+		return id;
 	}
 
 	/**
@@ -60,8 +60,8 @@ public abstract class Hamburguesa{
 	 * 
 	 * @param id La ID nueva de la hamburguesa
 	 */
-	public void modificarID(String id){
-		ID = id;
+	public void modificarID(String iD){
+		id = iD;
 	}
 
 	/**
@@ -207,7 +207,7 @@ public abstract class Hamburguesa{
 	 * @return La cadena con la informacion de la hamburguesa
 	 */
 	public String toString(){
-		if(esVegetariano()) return "---"+ID + " Hamburguesa vegetariana " +nombre +"---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio;
-		return "---"+ID + "  Hamburguesa carnivora " +nombre+"---"+"\n" + "Descripcion: " +descripcion +"\n" +"Precio: $" + precio;
+		if(esVegetariano()) return "---"+id + " Hamburguesa vegetariana " +nombre +"---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio;
+		return "---"+id + "  Hamburguesa carnivora " +nombre+"---"+"\n" + "Descripcion: " +descripcion +"\n" +"Precio: $" + precio;
 	}
 }
