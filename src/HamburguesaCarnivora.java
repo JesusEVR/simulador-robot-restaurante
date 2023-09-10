@@ -1,5 +1,5 @@
 /**
- * Clase que define las hamburguesas "carnivoras" (no veganas). Hereda de la clase absracta 'Hamburguesa'
+ * Clase que define las hamburguesas "carnivoras" (no vegetariana). Hereda de la clase absracta 'Hamburguesa'
  *
  * @author Supr-Lilito
  * @author paolasanv
@@ -62,7 +62,7 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	}
 
 	/**
-	 * Metodo implementado que detalla que se esta preparando la carne (vegana o no vegana) de la hamburguesa
+	 * Metodo implementado que detalla que se esta preparando la carne (vegetariana o no) de la hamburguesa
          *
 	 */
 	@Override
@@ -71,7 +71,7 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	}
 	
 	/**
-	 * Metodo implementado que detalla que se esta poniendo la carne (vegana o no vegana) de la hamburguesa
+	 * Metodo implementado que detalla que se esta poniendo la carne (vegetariana o no) de la hamburguesa
          *
 	 */
 	@Override
