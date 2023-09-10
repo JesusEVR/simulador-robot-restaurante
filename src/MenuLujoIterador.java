@@ -7,44 +7,38 @@
  * @version septiembre 2023
  *
  */
-import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.NoSuchElementException;
 public class MenuLujoIterador implements Iterador{
-	ArrayList<Hamburguesa> hamburguesasDeLujo;
-	int posicion = 0;
+	private Enumeration<Hamburguesa> numeracion;
 
 	/**
-     * Constructor de la clase MenuGeneralIterador.
+     * Constructor de la clase MenuLujoIterador
      * 
-     * @param hamburguesasDeLujo Lista de hamburguesas del menú general
+     * @param hamburguesasDeLujo Enumeracion de hamburguesas del menu de Lujo
      */
-	public MenuLujoIterador(ArrayList<Hamburguesa> hamburguesasDeLujo){
-		this.hamburguesasDeLujo = hamburguesasDeLujo;
+	public MenuLujoIterador(Hashtable<Integer, Hamburguesa> hamburguesasDeLujo){
+		numeracion = hamburguesasDeLujo.elements();
 	}
 
 	@Override
 	public boolean hasNext(){
-		if(posicion >= hamburguesasDeLujo.size()){
-			return false;
-		}
-		else{
-			return true;
-		}
+		return numeracion.hasMoreElements();
 	}
 
 	@Override 
 	public Hamburguesa next(){
-		Hamburguesa hamDeLujo = hamburguesasDeLujo.get(posicion);
-		posicion += 1;
-		return hamDeLujo;
+		if (hasNext()){
+			return numeracion.nextElement();
+		}
+		else{
+			throw new NoSuchElementException("No hay mas elementos en el menu.");
+		}
 	}
 
 	@Override
 	public void remove(){
-		if (posicion > 0 && posicion <= hamburguesasDeLujo.size()){
-        	hamburguesasDeLujo.remove(posicion - 1); // Elimina el elemento en la posición actual
-        	posicion--; // Ajusta la posición del iterador después de eliminar
-    	} else {
-        	throw new IllegalStateException("No se puede llamar a remove() antes de next() o después de haber llegado al final.");
-    	}
+		throw new UnsupportedOperationException("Remove no está soportado para Hashtable.");
 	}
 }

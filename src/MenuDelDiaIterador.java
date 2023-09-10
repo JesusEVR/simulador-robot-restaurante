@@ -13,9 +13,9 @@ public class MenuDelDiaIterador implements Iterador{
 	int posicion = 0;
 
 	/**
-     * Constructor de la clase MenuGeneralIterador.
+     * Constructor de la clase MenuDelDiaIterador.
      * 
-     * @param hamburguesasDelDia Lista de hamburguesas del menú general
+     * @param hamburguesasDelDia Lista de hamburguesas del menu del dia
      */
 	public MenuDelDiaIterador(ArrayList<Hamburguesa> hamburguesasDelDia){
 		this.hamburguesasDelDia = hamburguesasDelDia;

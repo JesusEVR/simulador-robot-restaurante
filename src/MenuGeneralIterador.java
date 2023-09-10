@@ -7,23 +7,27 @@
  * @version septiembre 2023
  *
  */
-import java.util.ArrayList;
+
 public class MenuGeneralIterador implements Iterador{
-	ArrayList<Hamburguesa> hamburguesasGeneral;
+	Hamburguesa hamburguesasGeneral[];
 	int posicion = 0;
 
 	/**
      * Constructor de la clase MenuGeneralIterador.
      * 
-     * @param hamburguesasGeneral Lista de hamburguesas del menú general
+     * @param hamburguesasGeneral Arreglo de hamburguesas del menú general
      */
-	public MenuGeneralIterador(ArrayList<Hamburguesa> hamburguesasGeneral){
+	public MenuGeneralIterador(Hamburguesa[] hamburguesasGeneral){
 		this.hamburguesasGeneral = hamburguesasGeneral;
+	}
+
+	public int obtenerPosicionFinal(){
+		return 0;
 	}
 
 	@Override
 	public boolean hasNext(){
-		if(posicion >= hamburguesasGeneral.size()){
+		if(posicion >= hamburguesasGeneral.length || hamburguesasGeneral[posicion] == null){
 			return false;
 		}
 		else{
@@ -33,15 +37,15 @@ public class MenuGeneralIterador implements Iterador{
 
 	@Override 
 	public Hamburguesa next(){
-		Hamburguesa hamGeneral = hamburguesasGeneral.get(posicion);
+		Hamburguesa hamGeneral = hamburguesasGeneral[posicion];
 		posicion += 1;
 		return hamGeneral;
 	}
 
 	@Override
 	public void remove(){
-		if (posicion > 0 && posicion <= hamburguesasGeneral.size()){
-        	hamburguesasGeneral.remove(posicion - 1); // Elimina el elemento en la posición actual
+		if (posicion > 0 && posicion <= hamburguesasGeneral.length){
+        	hamburguesasGeneral[posicion - 1] = null; // Elimina el elemento en la posición actual
         	posicion--; // Ajusta la posición del iterador después de eliminar
     	} else {
         	throw new IllegalStateException("No se puede llamar a remove() antes de next() o después de haber llegado al final.");
