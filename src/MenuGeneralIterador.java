@@ -9,7 +9,7 @@
  */
 
 public class MenuGeneralIterador implements Iterador{
-	Hamburguesa hamburguesasGeneral[];
+	Hamburguesa[] hamburguesasGeneral;
 	int posicion = 0;
 
 	/**
