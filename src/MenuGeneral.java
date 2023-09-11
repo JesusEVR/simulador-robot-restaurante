@@ -31,8 +31,8 @@ public class MenuGeneral implements Menu{
 	* Metodo que añade hamburgesas al menú
 	*/
 	public void agregarHamburguesa(Hamburguesa h){
-		if(posicion>menuGeneral.length){
-			System.out.println("El menú general está lleno");
+		if(posicion>=menuGeneral.length){
+			System.out.println("No es posible añadir más hamburguesas. El menú general está lleno");
 		}else {
 			menuGeneral[posicion] = h;
 			posicion++;
