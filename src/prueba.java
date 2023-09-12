@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class prueba{
 	
 	public static void main(String[] args){
@@ -9,7 +10,7 @@ public class prueba{
 		System.out.println(h2);
 		h2.prepararHamburguesa();*/
 		
-		MenuGeneral m = new MenuGeneral();
+		/*MenuGeneral m = new MenuGeneral();
 		MenuDeLujo m2 = new MenuDeLujo();
 		MenuDelDia m3 = new MenuDelDia();
 		m3.agregarHamburguesa(h);
@@ -34,8 +35,77 @@ public class prueba{
 		System.out.println("\n"+"----> Menu del dia");
 		while(it.hasNext()){
 			System.out.println(it.next());
-		}
+		}*/
+		Robot r = new Robot();
+			Scanner sc = new Scanner(System.in);
+		int opcion;
+
 		
+
+		do{
+			System.out.println("Por favor elige la opcion "
+							+ "que deseas ejecutar.\n" + 
+							"1.- Suspender.\n" +
+							"2.- Activar.\n" + 
+							"3.- Caminar.\n" + 
+							"4.- Atender.\n" +
+							"5.- Cocinar.\n" +
+							"6.- Entregar \n"+			   
+							"0.- Terminar simulacion.\n");
+					
+				while (true){
+					try {
+						String opcionUsuario = sc.nextLine();
+						opcion = Integer.parseInt(opcionUsuario);
+						break;
+					}catch (NumberFormatException ex){
+						System.out.println("Por favor elige la opcion VALIDA "
+							+ "que deseas ejecutar.\n" + 
+							"1.- Suspender.\n" +
+							"2.- Activar.\n" + 
+							"3.- Caminar.\n" + 
+							"4.- Atender.\n" +
+							"5.- Cocinar.\n" +
+							"6.- Entregar \n"+			   
+							"0.- Terminar simulacion.\n");
+					}
+				}
+
+				switch(opcion){
+					case 1:
+						r.suspender();
+						break;
+
+					case 2:
+						r.activar();
+						break;
+
+					case 3:
+						r.caminar();
+						break;
+
+					case 4:
+						r.atender();
+						break;
+
+					case 5:
+						r.cocinar();
+						break;
+
+					case 6:
+						r.entregar();
+						break;
+					case 0:
+						break;
+
+					default:
+						System.out.println("\nPor favor elige la opcion que deseas ejecutar.");
+						break;
+
+				}
+
+		}while(opcion != 0);
+
 		
 		
 	}
