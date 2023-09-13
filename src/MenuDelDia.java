@@ -20,8 +20,12 @@ public class MenuDelDia implements Menu{
 	*/
 	public MenuDelDia(){
 		menuDelDia = new ArrayList<Hamburguesa>();
-		Hamburguesa h1 = new HamburguesaVegetariana("ID002", "prueba", "burger", 45.0, true, "algas");
+		Hamburguesa h1 = new HamburguesaVegetariana("MD01", "vegetariana", "burger", 45.0, true, "algas");
 		agregarHamburguesa(h1);
+		Hamburguesa h2 = new HamburguesaCarnivora("MD02", "carnivora", "burger", 45.0, false, "res");
+		agregarHamburguesa(h2);
+		Hamburguesa h3 = new HamburguesaCarnivora("MD03", "carnivora", "burger", 45.0, false, "pollo");
+		agregarHamburguesa(h3);
 	}
 	
 	/**

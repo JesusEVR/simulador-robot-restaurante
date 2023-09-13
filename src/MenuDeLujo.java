@@ -19,8 +19,12 @@ public class MenuDeLujo implements Menu{
 	* Constructor por omisión que inicializa el menú de lujo 
 	*/
 	public MenuDeLujo(){
-		Hamburguesa h1 = new HamburguesaVegetariana("ID003", "prueba", "burgerV", 45.0, true, "tofu");
+		Hamburguesa h1 = new HamburguesaVegetariana("ML01", "prueba", "burgerV", 45.0, true, "tofu");
 		agregarHamburguesa(h1.obtenerID(), h1);	
+		Hamburguesa h2 = new HamburguesaVegetariana("ML02", "prueba", "vevfvef", 45.0, true, "tofu");
+		agregarHamburguesa(h2.obtenerID(), h2);	
+		Hamburguesa h3 = new HamburguesaVegetariana("ML03", "prueba", "ffveve", 45.0, true, "tofu");
+		agregarHamburguesa(h3.obtenerID(), h3);	
 	}
 	
 	/**

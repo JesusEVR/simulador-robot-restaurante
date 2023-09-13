@@ -9,10 +9,10 @@ public class Robot{
 	private EstadoRobot modoEntregar;
 	
 	
-	private boolean estaActivo = false; //verifica si ya se llamó a activar()
-	private boolean puedeCocinar=false; //se vuelve true despues de llamar a atender()
+	private boolean estaActivo; //verifica si ya se llamó a activar()
+	private boolean puedeCocinar; //se vuelve true despues de llamar a atender()
 	private String ordenDelCliente=""; //en esta se guarda el id de la hamburguesa que el cliente quiere ordenar
-	private boolean yaCocino=false; //se hace true despues de haber llamado a cocinar() y se hace false despues de llamar a entregar()
+	private boolean yaCocino; //se hace true despues de haber llamado a cocinar() y se hace false despues de llamar a entregar()
 	
 	public Robot(){
 		modoSuspendido= new ModoSuspendido(this);
@@ -20,10 +20,15 @@ public class Robot{
 		modoAtender = new ModoAtender(this);
 		modoCocinar = new ModoCocinar(this);
 		modoEntregar = new ModoEntregar(this);
+	
+		estaActivo = false;
+		puedeCocinar=false;
+		yaCocino=false;
+		
 		estadoActual = modoSuspendido;
 	}
 	
-	public void yaCocino(boolean c){ //verifica si ya coció la orden del cliente
+	public void yaCocino(boolean c){ //verifica si ya cocinó la orden del cliente
 		yaCocino=c;
 	}
 	
@@ -31,11 +36,11 @@ public class Robot{
 		return yaCocino;
 	}
 	
-	public void puedeCocinar(boolean p){ //verifica si el robot puede cocinar despues de que el cliente ha ordenado
+	public void puedeCocinar(boolean p){  //asigna true si el robot ya cocinó despues de que el cliente ordenó
 		puedeCocinar = p; 
 	}
 	
-	public boolean puedeCocinar(){
+	public boolean puedeCocinar(){ //verifica si el robot puede cocinar despues de que el cliente ha ordenado
 		return puedeCocinar;
 	}
 	
@@ -47,15 +52,14 @@ public class Robot{
 		return ordenDelCliente;
 	}
 	
-	public void desactivar(){ //desactica el robot
-		estaActivo=false;
+	public void activarRobot(boolean a){ //desactiva o activa el robot
+		estaActivo=a;
 	}
 	public boolean estaActivo(){ //verifica si el robot está activo o no
 		return estaActivo;
 	}
 	
 	public void activar(){
-		estaActivo = true;
 		estadoActual.activar();
 	}
 	
@@ -76,7 +80,7 @@ public class Robot{
 	}
 	
 	public void caminar(){
-		estadoActual.cocinar();
+		estadoActual.caminar();
 	}
 	
 	public void asignarNuevoEstado(EstadoRobot nuevoEstado){
@@ -105,6 +109,40 @@ public class Robot{
 	}
 	
 	public void imprimeMenu(){ //en este se usan los iteradores 
-		System.out.println("aqui va el menu");
+		System.out.println("Con gusto te mostraré nuestro menú");
+		System.out.println("**** M E N U    G E N E R A L  ****");
+		menuGeneral();
+		System.out.println("**** M E N U    D E L   D I A ****");
+		menuDelDia();
+		System.out.println("**** M E N U    D E   L U J O ****");
+		menuDeLujo();
 	}
+	
+	public void menuGeneral(){
+		Menu menuGeneral = new MenuGeneral();
+		Iterador iterador =  menuGeneral.creaIterador();
+		while(iterador.hasNext()){
+			System.out.println(iterador.next());
+		}
+	}
+	
+	public void menuDelDia(){
+		Menu menuDelDia = new MenuDelDia();
+		Iterador iterador =  menuDelDia.creaIterador();
+		while(iterador.hasNext()){
+			System.out.println(iterador.next());
+		}
+	}
+	
+	public void menuDeLujo(){
+		Menu menuDeLujo = new MenuDeLujo();
+		Iterador iterador =  menuDeLujo.creaIterador();
+		while(iterador.hasNext()){
+			System.out.println(iterador.next());
+		}
+	}
+	
+	
+	
+	
 }

@@ -24,7 +24,7 @@ public class ModoAtender implements EstadoRobot{
 	
 	public void caminar(){
 		if(robot.estaActivo()){
-			System.out.println("No puedo suspenderme, estoy atendiendo un cliente");
+			System.out.println("No puedo suspenderme, te estoy atendiendo");
 		}else{
 			System.out.println("Estoy suspendido");
 		}
@@ -32,13 +32,13 @@ public class ModoAtender implements EstadoRobot{
 	public void atender(){
 		if(robot.estaActivo()){
 			
-			//robot.imprimeMenu();
-			//System.out.println("¿Que deseas ordenar?");
+			robot.imprimeMenu();
+			System.out.println("¿Que deseas ordenar?");
 			//aqui se registra la orden 
 			robot.asignarNuevoEstado(robot.modoCocinar());
 			//robot.ordenDelCliente(String IDdelCliente);
 			robot.puedeCocinar(true);
-			System.out.println("---Cambiando a modo cocinar---");
+			System.out.println("--- Cambiando a modo COCINAR... ---");
 			
 		}else{
 			System.out.println("Estoy suspendido");

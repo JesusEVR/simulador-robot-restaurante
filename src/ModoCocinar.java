@@ -47,7 +47,7 @@ public class ModoCocinar implements EstadoRobot{
 			robot.asignarNuevoEstado(robot.modoEntregar());
 			robot.puedeCocinar(false);
 			robot.yaCocino(true);
-			System.out.println("---Cambiando a modo entrega---");
+			System.out.println("---Cambiando a modo ENTREGAR... ---");
 		}else if(robot.estaActivo() && !robot.puedeCocinar()) {
 			System.out.println("No sé que cocinar si aún no ordenas");
 		}else{

@@ -44,7 +44,8 @@ public class ModoEntregar implements EstadoRobot{
 			System.out.println("Aquí tiene su pedido, gracias por compra");
 			robot.asignarNuevoEstado(robot.modoSuspendido());
 			robot.yaCocino(false);
-			System.out.println("Cambiando a modo suspendido");
+			robot.activarRobot(false);
+			System.out.println("--- Cambiando a modo SUSPENDIDO... ---");
 		}else if(robot.estaActivo() && !robot.yaCocino()){
 			System.out.println("Antes de hacer tu entrega primero debes ordenar");
 		}else{
