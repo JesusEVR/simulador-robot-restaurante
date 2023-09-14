@@ -9,8 +9,8 @@
  */
 
 public class MenuGeneralIterador implements Iterador{
-	Hamburguesa[] hamburguesasGeneral;
-	int posicion = 0;
+	private Hamburguesa[] hamburguesasGeneral;
+	private int posicion = 0;
 
 	/**
      * Constructor de la clase MenuGeneralIterador.
