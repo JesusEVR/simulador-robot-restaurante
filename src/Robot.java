@@ -9,13 +9,13 @@ public class Robot{
 	private boolean estaActivo; //verifica si ya se llamó a activar()
 	private boolean puedeCocinar; //se vuelve true despues de llamar a atender()
 	private boolean yaCocino; //se hace true despues de haber llamado a cocinar() y se hace false despues de llamar a entregar()
-	private Menu menuDeLujo = new MenuDeLujo();
-	private Menu menuDelDia = new MenuDelDia();
-	private Menu menuGeneral = new MenuGeneral();
+	private Menu menuDeLujo;
+	private Menu menuDelDia;
+	private Menu menuGeneral;
 	private String orden = "";
 	private Hamburguesa burgerCliente;
 	
-	public Robot(){
+	public Robot(Menu general, Menu delDia, Menu deLujo){
 		modoSuspendido= new ModoSuspendido(this);
 		modoCaminar = new ModoCaminar(this);
 		modoAtender = new ModoAtender(this);
@@ -25,6 +25,9 @@ public class Robot{
 		puedeCocinar=false;
 		yaCocino=false;
 		estadoActual = modoSuspendido;
+		menuGeneral = general;
+		menuDelDia = delDia;
+		menuDeLujo = deLujo;
 	}
 	
 	public void yaCocino(boolean c){ //verifica si ya cocinó la orden del cliente
@@ -149,7 +152,7 @@ public class Robot{
 		String id="";
 		Iterador iteradorGeneral =  menuGeneral.creaIterador();
 		while(iteradorGeneral.hasNext()){
-				h = iteradorGeneral.next();
+				h = (Hamburguesa) iteradorGeneral.next();
 				id = h.obtenerID();
 				if(id.equals(orden)){
 						burgerCliente= h;
@@ -162,7 +165,7 @@ public class Robot{
 		String id="";
 		Iterador iteradorDelDia =  menuDelDia.creaIterador();
 		while(iteradorDelDia.hasNext()){
-				h = iteradorDelDia.next();
+				h = (Hamburguesa) iteradorDelDia.next();
 				id = h.obtenerID();
 				if(id.equals(orden)){
 						burgerCliente= h;
@@ -176,7 +179,7 @@ public class Robot{
 		String id="";
 		 Iterador iteradorDeLujo =  menuDeLujo.creaIterador();
 		while(iteradorDeLujo.hasNext()){
-				h = iteradorDeLujo.next();
+				h = (Hamburguesa) iteradorDeLujo.next();
 				id = h.obtenerID();
 				if(id.equals(orden)){
 						burgerCliente= h;
