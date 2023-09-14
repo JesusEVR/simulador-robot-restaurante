@@ -21,15 +21,31 @@ public class ModoSuspendido implements EstadoRobot{
 		
 	}
 	public void caminar(){
-		System.out.println("No puedo hacer nada si no me has activado");
+		if(robot.estaActivo()){
+			System.out.println("Estoy trabajando, no me puedes desactivar");
+		}else{
+			System.out.println("No puedo hacer nada si no me has activado");
+		}
 	}
 	public void atender(){
+		if(robot.estaActivo()){
+			System.out.println("Estoy trabajando, no me puedes desactivar");
+		}else{
 		System.out.println("No puedo hacer nada si no me has activado");
+		}
 	}
 	public void cocinar(){
+		if(robot.estaActivo()){
+			System.out.println("Estoy trabajando, no me puedes desactivar");
+		}else{
 		System.out.println("No puedo hacer nada si no me has activado");
+		}
 	}
 	public void entregar(){
+		if(robot.estaActivo()){
+			System.out.println("Estoy trabajando, no me puedes desactivar");
+		}else{
 		System.out.println("No puedo hacer nada si no me has activado");
+		}
 	}
 }
