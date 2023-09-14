@@ -10,8 +10,8 @@ import java.util.ArrayList;
  */
 
 public class MenuDelDiaIterador implements Iterador{
-	ArrayList<Hamburguesa> hamburguesasDelDia;
-	int posicion = 0;
+	private ArrayList<Hamburguesa> hamburguesasDelDia;
+	private int posicion = 0;
 
 	/**
      * Constructor de la clase MenuDelDiaIterador.
