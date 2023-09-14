@@ -1,18 +1,19 @@
 public class Robot{
 	
 	private EstadoRobot estadoActual;  //estado actual del robot
-	
 	private EstadoRobot modoSuspendido;
 	private EstadoRobot modoCaminar;
 	private EstadoRobot modoAtender;
 	private EstadoRobot modoCocinar;
 	private EstadoRobot modoEntregar;
-	
-	
 	private boolean estaActivo; //verifica si ya se llamó a activar()
 	private boolean puedeCocinar; //se vuelve true despues de llamar a atender()
-	private String ordenDelCliente=""; //en esta se guarda el id de la hamburguesa que el cliente quiere ordenar
 	private boolean yaCocino; //se hace true despues de haber llamado a cocinar() y se hace false despues de llamar a entregar()
+	private Menu menuDeLujo = new MenuDeLujo();
+	private Menu menuDelDia = new MenuDelDia();
+	private Menu menuGeneral = new MenuGeneral();
+	private String orden = "";
+	private Hamburguesa burgerCliente;
 	
 	public Robot(){
 		modoSuspendido= new ModoSuspendido(this);
@@ -20,11 +21,9 @@ public class Robot{
 		modoAtender = new ModoAtender(this);
 		modoCocinar = new ModoCocinar(this);
 		modoEntregar = new ModoEntregar(this);
-	
 		estaActivo = false;
 		puedeCocinar=false;
 		yaCocino=false;
-		
 		estadoActual = modoSuspendido;
 	}
 	
@@ -42,14 +41,6 @@ public class Robot{
 	
 	public boolean puedeCocinar(){ //verifica si el robot puede cocinar despues de que el cliente ha ordenado
 		return puedeCocinar;
-	}
-	
-	public void ordenDelCliente(String id){ //guarda la orden del cliente
-		ordenDelCliente = id;
-	}
-	
-	public String ordenDelCliente(){
-		return ordenDelCliente;
 	}
 	
 	public void activarRobot(boolean a){ //desactiva o activa el robot
@@ -108,8 +99,8 @@ public class Robot{
 		return modoEntregar;
 	}
 	
-	public void imprimeMenu(){ //en este se usan los iteradores 
-		System.out.println("Con gusto te mostraré nuestro menú");
+	public void imprimeMenu(){
+		System.out.println("-> Con gusto te mostraré nuestro menú");
 		System.out.println("**** M E N U    G E N E R A L  ****");
 		menuGeneral();
 		System.out.println("**** M E N U    D E L   D I A ****");
@@ -119,30 +110,81 @@ public class Robot{
 	}
 	
 	public void menuGeneral(){
-		Menu menuGeneral = new MenuGeneral();
-		Iterador iterador =  menuGeneral.creaIterador();
-		while(iterador.hasNext()){
-			System.out.println(iterador.next());
+		Iterador iteradorGeneral =  menuGeneral.creaIterador();
+		while(iteradorGeneral.hasNext()){
+			System.out.println(iteradorGeneral.next());
 		}
 	}
 	
 	public void menuDelDia(){
-		Menu menuDelDia = new MenuDelDia();
-		Iterador iterador =  menuDelDia.creaIterador();
-		while(iterador.hasNext()){
-			System.out.println(iterador.next());
+		Iterador iteradorDelDia =  menuDelDia.creaIterador();
+		while(iteradorDelDia.hasNext()){
+			System.out.println(iteradorDelDia.next());
 		}
 	}
 	
 	public void menuDeLujo(){
-		Menu menuDeLujo = new MenuDeLujo();
-		Iterador iterador =  menuDeLujo.creaIterador();
-		while(iterador.hasNext()){
-			System.out.println(iterador.next());
+		 Iterador iteradorDeLujo =  menuDeLujo.creaIterador();
+		while(iteradorDeLujo.hasNext()){
+			System.out.println(iteradorDeLujo.next());
 		}
 	}
 	
+	public void orden(String id){ //guarda el id de la orden
+		orden = id.toUpperCase();
+	}
 	
+	public void ordenDelCliente(){ //busca la hamburguesa que el cliente quiere
+		if(orden.contains("MG")){	//la hamburguesa esta el menu general
+			buscarMenuGeneral();
+		}else if(orden.contains("MD")){	 //la hamburguesa esta en el menu del dia
+			buscarMenuDelDia();
+		}else if(orden.contains("ML")){ //la hamburguesa esta es del menu de lujo
+			buscarMenuDeLujo(); 
+		}
+	}
+
+	public void buscarMenuGeneral(){
+		Hamburguesa h;
+		String id="";
+		Iterador iteradorGeneral =  menuGeneral.creaIterador();
+		while(iteradorGeneral.hasNext()){
+				h = iteradorGeneral.next();
+				id = h.obtenerID();
+				if(id.equals(orden)){
+						burgerCliente= h;
+				}
+			}	
+	}
 	
+	public void buscarMenuDelDia(){
+		Hamburguesa h;
+		String id="";
+		Iterador iteradorDelDia =  menuDelDia.creaIterador();
+		while(iteradorDelDia.hasNext()){
+				h = iteradorDelDia.next();
+				id = h.obtenerID();
+				if(id.equals(orden)){
+						burgerCliente= h;
+				}
+			}	
+		
+	}
 	
+	public void buscarMenuDeLujo(){
+		Hamburguesa h;
+		String id="";
+		 Iterador iteradorDeLujo =  menuDeLujo.creaIterador();
+		while(iteradorDeLujo.hasNext()){
+				h = iteradorDeLujo.next();
+				id = h.obtenerID();
+				if(id.equals(orden)){
+						burgerCliente= h;
+				}
+			}	
+	}
+	
+	public Hamburguesa obtenerPedido(){ //devuelve la hamburguesa que quiere el cliente
+		return burgerCliente;
+	}
 }

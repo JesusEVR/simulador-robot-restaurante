@@ -38,12 +38,12 @@ public class ModoCocinar implements EstadoRobot{
 		}
 	}
 	public void cocinar(){
-		if(robot.estaActivo() && robot.puedeCocinar()){
-			
-			
-			//String id = robot.ordenDelCliente();
-			//aqui se busca la hamburguesa y se llama al metodo h.prepararHamburguesa()
-			
+		
+		if(robot.estaActivo() && robot.puedeCocinar()){ //aqui se busca la hamburguesa y se llama al metodo prepararHamburguesa()
+			System.out.println("---Preparando ando tu burger ---");
+			robot.ordenDelCliente();
+			Hamburguesa orden = robot.obtenerPedido();
+			orden.prepararHamburguesa();
 			robot.asignarNuevoEstado(robot.modoEntregar());
 			robot.puedeCocinar(false);
 			robot.yaCocino(true);

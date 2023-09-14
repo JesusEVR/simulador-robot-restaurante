@@ -33,7 +33,9 @@ public class ModoEntregar implements EstadoRobot{
 		}
 	}
 	public void cocinar(){
-		if(robot.estaActivo()){
+		if(robot.estaActivo() && robot.yaCocino()){
+			System.out.println("Ya cociné, solo falta que recojas tu pedido");
+		}else if(robot.estaActivo() && !robot.yaCocino()){
 			System.out.println("Antes de hacer tu entrega primero debes ordenar");
 		}else{
 			System.out.println("Estoy suspendido");
