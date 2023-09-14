@@ -23,7 +23,7 @@ public interface Iterador{
      * 
      * @return El siguiente elemento del menu.
      */
-	public Object next();
+	public Hamburguesa next();
 
 	/**
      * Elimina el elemento actual del menu, es decir el elemento en el ultimo indice.
