@@ -36,7 +36,12 @@ public class prueba{
 		while(it.hasNext()){
 			System.out.println(it.next());
 		}*/
-		Robot r = new Robot();
+		
+		Menu m1 = new MenuGeneral();
+		Menu m2 = new MenuDelDia();
+		Menu m3 = new MenuDeLujo();
+	
+		Robot r = new Robot(m1, m2, m3);
 			Scanner sc = new Scanner(System.in);
 		int opcion;
 
