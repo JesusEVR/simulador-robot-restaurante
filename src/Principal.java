@@ -49,10 +49,10 @@ public class Principal{
 		int opcion;
 
 		System.out.println("Muy buenos dias, tardes o noche señor usuario. ¡Bineveniodo a Mcburguesas!");
-		System.out.println("Nuestro robot mesero y cocinero se encuentra en Modo Suspendido.\n¡A continuacion las acciones que puede hacer!");
+		System.out.println("Nuestro robot mesero y cocinero se encuentra en Modo Suspendido.\n¡A continuacion las acciones que puede hacer!\n");
 
 		do{
-			System.out.println("Por favor elige la opcion "
+			System.out.println("Por favor, inserta el numero de la opcion "
 							+ "que deseas ejecutar.\n" + 
 							"1.- Suspender\n" +
 							"2.- Activar\n" + 
@@ -105,6 +105,7 @@ public class Principal{
 						r.entregar();
 						break;
 					case 0:
+						System.out.println("\n¡Esperamos verlo nuevamente en McBurguesas!.");
 						break;
 
 					default:
