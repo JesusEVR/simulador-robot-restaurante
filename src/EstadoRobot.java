@@ -18,7 +18,7 @@ public interface EstadoRobot{
 
 	/**
 	 * Metodo que activa al Robot
-	 * Pasa automáticamente al modo Maminar
+	 * Pasa automáticamente al modo Caminar
 	 *
 	 */
 	public void activar();
