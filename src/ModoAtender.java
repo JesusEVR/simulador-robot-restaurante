@@ -68,7 +68,7 @@ public class ModoAtender implements EstadoRobot{
 		robot.imprimeMenu();
 		
 		while(!idCorrecta){
-			System.out.print("¿Que deseas ordenar? Ingresa el ID del platillo: ");
+			System.out.print("\n¿Que deseas ordenar? Ingresa el ID del platillo: ");
 			opcion = scan.nextLine();
 			
 			if(opcion.length()==4){
