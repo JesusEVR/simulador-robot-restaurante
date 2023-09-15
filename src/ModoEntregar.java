@@ -69,7 +69,7 @@ public class ModoEntregar implements EstadoRobot{
 	 *
 	 */
 	public void cocinar(){
-		System.out.println("** MODO ENTREGAR **\n--- Ya cocine tu hamburguesa, solo deboe entregartela---\n");
+		System.out.println("** MODO ENTREGAR **\n--- Ya cocine tu hamburguesa, solo debo entregartela---\n");
 	}
 
 	/**
