@@ -6,7 +6,6 @@ public class Robot{
 	private EstadoRobot modoAtender;
 	private EstadoRobot modoCocinar;
 	private EstadoRobot modoEntregar;
-	private boolean estaActivo; //verifica si ya se llamó a activar()
 	private boolean puedeCocinar; //se vuelve true despues de llamar a atender()
 	private boolean yaCocino; //se hace true despues de haber llamado a cocinar() y se hace false despues de llamar a entregar()
 	private Menu menuDeLujo;
@@ -21,7 +20,6 @@ public class Robot{
 		modoAtender = new ModoAtender(this);
 		modoCocinar = new ModoCocinar(this);
 		modoEntregar = new ModoEntregar(this);
-		estaActivo = false;
 		puedeCocinar=false;
 		yaCocino=false;
 		estadoActual = modoSuspendido;
@@ -44,13 +42,6 @@ public class Robot{
 	
 	public boolean puedeCocinar(){ //verifica si el robot puede cocinar despues de que el cliente ha ordenado
 		return puedeCocinar;
-	}
-	
-	public void activarRobot(boolean a){ //desactiva o activa el robot
-		estaActivo=a;
-	}
-	public boolean estaActivo(){ //verifica si el robot está activo o no
-		return estaActivo;
 	}
 	
 	public void activar(){
