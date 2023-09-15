@@ -26,27 +26,28 @@ public interface EstadoRobot{
 	/**
 	 * Metodo que hace que el Robot se acerque a la mesa del cliente, mientras esta en modo Caminar.
 	 * Lo unico que puede hacer mientras se acerca, o camina, es suspenderse.
+         * Al llegar a la mesa del cliente, cambia al modo Atender.
 	 *
 	 */
 	public void caminar();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Atender".
-	 * En este estado no puede hacer nada mas que atender al cliente.
-	 *
+	 * Metodo que muestra al cliente los menus del restaurante para que ordene un platillo al robot.
+         *
 	 */
 	public void atender();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Cocinar".
-	 * En este estado no puede hacer nada mas que cocinar la orden del cliente.
+	 * Metodo que hace que el robot prepare la orden del cliente. Cuando termina cambia al modo Entregar.
+         * Se muestran todos los pasos que el robot sigue para preparar la hamburguesa
+	 * En el modo Cocinar no puede hacer nada mas que cocinar la hamburguesa.
 	 *
 	 */
 	public void cocinar();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Entregar".
-	 * Despues de enregar el pedido del cliente, regresa a su estado "Suspendido"
+	 * Metodo que hace que el robot entregue la hamburguesa al comensal.
+	 * Despues de entregar el pedido, regresa al modo "Suspendido"
 	 *
 	 */
         public void entregar();
