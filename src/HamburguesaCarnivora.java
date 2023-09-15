@@ -47,15 +47,15 @@ public class HamburguesaCarnivora extends Hamburguesa{
 		boolean seguir = true;
 		
 			while(seguir){
-				System.out.println("Dime papu, ¿quieres queso amarrillo en tu hamburguesa? Sí = s, No = n");
+				System.out.println("--- Dime papu, ¿quieres queso amarrillo en tu hamburguesa? ---\nSí = s, No = n");
 				opcion = scan.nextLine();
 				aMinuscula = opcion.toLowerCase();
 			
 				if(aMinuscula.equals("s")){
-				System.out.println("Si le sabes, bro");
+				System.out.println("--- Si le sabes, bro ---");
 					seguir = false;
 				}else if(aMinuscula.equals("n")){
-					System.out.println("No te preocupes. No todos pueden tener buenos gustos");
+					System.out.println("--- No te preocupes. No todos pueden tener buenos gustos ---");
 					seguir = false;
 				}	
 			}	
@@ -67,7 +67,7 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	 */
 	@Override
 	public void prepararCarne(){
-		System.out.println("Preparando la carne de " +tipoCarne);
+		System.out.println("--- Preparando la carne de " +tipoCarne+ " ---");
 	}
 	
 	/**
@@ -76,7 +76,7 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	 */
 	@Override
 	public void ponerCarne(){
-		System.out.println("Poniendo la carne de " +tipoCarne);
+		System.out.println("--- Poniendo la carne de " +tipoCarne+ " ---");
 	}
 	
 }
