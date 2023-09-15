@@ -15,7 +15,7 @@ public class ModoCaminar implements EstadoRobot{
 	Robot robot;
 
 	/**
-	 * Constructor por parámetros del ModoCaminar
+	 * Constructor por parámetros del Modo Caminar
          * @param r El robot que será igual al atributo de la clase
 	 *
 	 */
