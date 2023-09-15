@@ -29,7 +29,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void suspender(){
-		System.out.println("** MODO SUSPENDIDO ** \n En modo suspendido el robot no puede suspenderse de nuevo. ¿En qué pensabas?");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede suspenderse de nuevo. ¿En qué pensabas?");
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void caminar(){
-		System.out.println("** MODO SUSPENDIDO ** \n En modo suspendido el robot no puede caminar");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede caminar");
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void atender(){
-		System.out.println("** MODO SUSPENDIDO ** \n En modo suspendido el robot no te puede atender");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede atender");
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void cocinar(){
-		System.out.println("** MODO SUSPENDIDO ** \n En modo suspendido el robot no te puede cocinar");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede cocinar");
 	}
 
 	/**
@@ -78,6 +78,6 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void entregar(){
-		System.out.println("** MODO SUSPENDIDO ** \n En modo suspendido el robot no te puede entregar ordenes");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede entregar ordenes");
 	}
 }
