@@ -56,7 +56,9 @@ public class ModoSuspendido implements EstadoRobot{
 
 	/**
 	 * Metodo que muestra al cliente los menus del restaurante para que ordene un platillo al robot.
-         *
+         * Se necesita que el robot este en modo atender para hacerlo.
+	 * Cuando el cliente ordena algo, el robot pasa al modo Cocinar.
+	 *
 	 */
 	public void atender(){
 		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede atender");
