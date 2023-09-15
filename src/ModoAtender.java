@@ -1,79 +1,105 @@
+/**
+ * Clase correspondiente al Modo Atender del Robot.
+ * Implementa los métodos de la interfaz EstadoRobot, los cuales son las acciones que el robot puede o no hacer.
+ *
+ * @author Supr-Lilito
+ * @author paolasanv
+ * @author JesusEVR
+ * @version septiembre 2023
+ *
+ */
+
 import java.util.Scanner;
 
 public class ModoAtender implements EstadoRobot{
-	
+	/**
+	 * Robot que realizará todos las acciones y tendrá diversos estados
+	 */
 	Robot robot;
-	
+
+	/**
+	 * Constructor por parámetros del Modo Suspendido
+         * @param r El robot que será igual al atributo de la clase
+	 *
+	 */
 	public ModoAtender(Robot r){
 		robot = r;
 	}
-	
+
+	/**
+	 * Metodo que cambia el estado del Robot a "Suspendido".
+	 * Lo unico que puede hacer en este estado es activarse.
+	 *
+	 */
 	public void suspender(){
-		if(robot.estaActivo()){
-			System.out.println("No puedo suspenderme, estoy atendiendo un cliente");
-		}else{
-			System.out.println("Estoy suspendido");
-		}
+		System.out.println("** MODO ATENDER **\n--- En modo atender no puedo suspenderme. ¿Para qué me llamaste entonces? ---");
 	}
-	
+
+	/**
+	 * Metodo que activa al Robot.
+	 * Pasa automáticamente al modo Caminar.
+	 *
+	 */
 	public void activar(){
-		if(robot.estaActivo()){
-			System.out.println("Ya estoy activo");
-		}else{
-			System.out.println("Estoy suspendido");
-		}
+		System.out.println("** MODO ATENDER **\n--- Ya estoy activo hermanito, por algo estoy junto a ti ---");
 	}
-	
+
+	/**
+	 * Metodo que hace que el Robot se acerque a la mesa del cliente, mientras esta en modo Caminar.
+	 * Lo unico que puede hacer mientras se acerca, o camina, es suspenderse.
+         * Al llegar a la mesa del cliente, cambia al modo Atender.
+	 *
+	 */
 	public void caminar(){
-		if(robot.estaActivo()){
-			System.out.println("No puedo suspenderme, te estoy atendiendo");
-		}else{
-			System.out.println("Estoy suspendido");
-		}
+		System.out.println("** MODO ATENDER **\n--- Ya he caminado hasta tu mesa, papu. ¿O sera que no soy lo suficientemente notorio?");
 	}
+
+	/**
+	 * Metodo que muestra al cliente los menus del restaurante para que ordene un platillo al robot.
+         *
+	 */
 	public void atender(){
 		Scanner scan =  new Scanner(System.in);
-		String opcion="";
-		boolean idCorrecta=false;
+		String opcion=  "";
+		boolean idCorrecta = false;
 		
-		if(robot.estaActivo()){
-			
-			robot.imprimeMenu();
-			
-			while(!idCorrecta){
+		robot.imprimeMenu();
+		
+		while(!idCorrecta){
 			System.out.print("¿Que deseas ordenar? Ingresa el ID del platillo: ");
 			opcion = scan.nextLine();
-				
-				if(opcion.length()==4){
-					if(opcion.toUpperCase().contains("MG") || opcion.toUpperCase().contains("MD") || opcion.toUpperCase().contains("ML")){ 
-						if(opcion.contains("01") || opcion.contains("02") || opcion.contains("03")){ 
-							idCorrecta = true;
-							}else{ System.out.println("1 Esa opcion es inválida, seleccione una del menú");}	
-					}else{System.out.println("2 Esa opcion es inválida, seleccione una del menú");}
-				}else{ System.out.println("3 Esa opcion es inválida, seleccione una del menú");}
-			}//end while
 			
-			robot.orden(opcion); //aqui se registra la orden 
-			robot.puedeCocinar(true);
-			robot.asignarNuevoEstado(robot.modoCocinar());
-			
-			System.out.println("--- Cambiando a modo COCINAR... ---");
-		}else{
-			System.out.println("Estoy suspendido");
-		}
+			if(opcion.length()==4){
+				if(opcion.toUpperCase().contains("MG") || opcion.toUpperCase().contains("MD") || opcion.toUpperCase().contains("ML")){ 
+					if(opcion.contains("01") || opcion.contains("02") || opcion.contains("03")){ 
+						idCorrecta = true;
+					}else{ System.out.println("1 Esa opcion es inválida, seleccione una del menú");}	
+				}else{System.out.println("2 Esa opcion es inválida, seleccione una del menú");}
+			}else{ System.out.println("3 Esa opcion es inválida, seleccione una del menú");}
+		} // Fin del ciclo while
+		
+		robot.orden(opcion); // Aqui se registra la orden 
+		robot.puedeCocinar(true);
+		robot.asignarNuevoEstado(robot.modoCocinar());
+		System.out.println("--- Cambiando a modo C O C I N A R ---");
 	}
+
+	/**
+	 * Metodo que hace que el robot prepare la orden del cliente. Cuando termina cambia al modo Entregar.
+         * Se muestran todos los pasos que el robot sigue para preparar la hamburguesa
+	 * En el modo Cocinar no puede hacer nada mas que cocinar la hamburguesa.
+	 *
+	 */
 	public void cocinar(){
-		if(robot.estaActivo()){
-			System.out.println("No puedo cocinar si aún no ordenas");
-		}else{
-			System.out.println("Estoy suspendido");
-		}
+		System.out.println("** MODO ATENDER **\n--- No puedo cocinar si aún no ordenas ---");
 	}
+
+	/**
+	 * Metodo que hace que el robot entregue la hamburguesa al comensal.
+	 * Despues de entregar el pedido, regresa al modo "Suspendido"
+	 *
+	 */
 	public void entregar(){
-		if(robot.estaActivo()){
-			System.out.println("No puedo entregar tu orden si aún no ordenas");
-		}else{
-			System.out.println("Estoy suspendido");
-		}
+		System.out.println("** MODO ATENDER **\n--- No puedo entregarte tu platillo si aún no lo ordenas ---");
 	}
 }
