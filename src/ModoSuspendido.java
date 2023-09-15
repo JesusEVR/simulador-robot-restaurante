@@ -47,6 +47,7 @@ public class ModoSuspendido implements EstadoRobot{
 	/**
 	 * Metodo que hace que el Robot se acerque a la mesa del cliente, mientras esta en modo Caminar.
 	 * Lo unico que puede hacer mientras se acerca, o camina, es suspenderse.
+         * Al llegar a la mesa del cliente, cambia al modo Atender.
 	 *
 	 */
 	public void caminar(){
@@ -56,7 +57,6 @@ public class ModoSuspendido implements EstadoRobot{
 	/**
 	 * Metodo que cambia el estado del Robot a "Atender".
 	 * En este estado no puede hacer nada mas que atender al cliente.
-         * Al llegar a la mesa del cliente, cambia al modo Atender.
 	 *
 	 */
 	public void atender(){
