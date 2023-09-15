@@ -132,7 +132,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerPan(){
-		System.out.println("Colocando el pan, camarada");
+		System.out.println("--- Colocando el pan, camarada ---");
 	}
 
 	/**
@@ -140,7 +140,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerMayonesa(){
-		System.out.println("Ponniendo la mayonesa. La favorita de Pedrito Sola, obvio");
+		System.out.println("--- Poniendo la mayonesa. La favorita de Pedrito Sola, obvio ---");
 	}
 
 	/**
@@ -148,7 +148,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerMostaza(){
-		System.out.println("Ahora toca la mostaza, el aderezo de los papus pro");
+		System.out.println("--- Ahora toca la mostaza, el aderezo de los papus pro ---");
 	}
 
 	/**
@@ -156,7 +156,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerVegetales(){
-		System.out.println("Tambien coloco los vegetales, sin olvidarme de los pepinillos");
+		System.out.println("--- Tambien coloco los vegetales, sin olvidarme de los pepinillos ---");
 	}
 
 	/**
@@ -164,7 +164,7 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerCatsup(){
-		System.out.println("El catsup igual te lo echo, no te me esponjes");
+		System.out.println("--- El catsup igual te lo echo, no te me esponjes ---");
 	}
 
 	/**
