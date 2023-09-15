@@ -44,15 +44,15 @@ public class HamburguesaVegetariana extends Hamburguesa{
 		String aMinuscula;
 		boolean seguir = true;
 			while(seguir){
-				System.out.println("Dime papu, ¿quieres queso vegetariano en tu hamburguesa? Sí = s, No = n");
+				System.out.println("--- Dime papu, ¿quieres queso vegetariano en tu hamburguesa? ---\nSí = s, No = n");
 				opcion = scan.nextLine();
 				aMinuscula = opcion.toLowerCase();
 			
 				if(aMinuscula.equals("s")){
-				System.out.println("Como desees bro");
+				System.out.println("--- Como desees bro ---");
 					seguir = false;
 				}else if(aMinuscula.equals("n")){
-					System.out.println("No pasa nada. Habia caducado de todas formas");
+					System.out.println("--- No pasa nada. Habia caducado de todas formas ---");
 					seguir = false;
 				}	
 			}	
@@ -63,7 +63,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
          *
 	 */
 	public void prepararCarne(){
-		System.out.println("Preparando la carne de " +tipoCarne);
+		System.out.println("--- Preparando la carne de " +tipoCarne+ " ---");
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
          *
 	 */
 	public void ponerCarne(){
-		System.out.println("Poniendo la carne de " +tipoCarne);
+		System.out.println("--- Poniendo la carne de " +tipoCarne+ " ---");
 	}
 	
 }
