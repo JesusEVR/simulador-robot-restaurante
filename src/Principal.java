@@ -49,11 +49,11 @@ public class Principal{
 		int opcion;
 
 		System.out.println("Muy buenos dias, tardes o noches. señor usuario. ¡Bienvenido a McBurguesas!\n");
-		System.out.println("Nuestro robot mesero (y cocinero) se encuentra en Modo Suspendido.\nA continuacion las acciones que puede hacer\n");
+		System.out.println("Nuestro robot mesero (y cocinero) se encuentra en Modo Suspendido.\nA continuacion las acciones que puede hacer.\n");
 
 		do{
 			System.out.println("Por favor, inserta el numero de la opcion "
-							+ "que deseas ejecutar.\n" + 
+							+ "que deseas ejecutar:\n" + 
 							"1.- Suspender\n" +
 							"2.- Activar\n" + 
 							"3.- Caminar\n" + 
@@ -69,7 +69,7 @@ public class Principal{
 						break;
 					}catch (NumberFormatException ex){
 						System.out.println("Por favor elige la opcion VALIDA "
-							+ "que deseas ejecutar.\n" + 
+							+ "que deseas ejecutar:\n" + 
 							"1.- Suspender\n" +
 							"2.- Activar\n" + 
 							"3.- Caminar\n" + 
