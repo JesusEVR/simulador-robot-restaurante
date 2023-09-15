@@ -41,18 +41,18 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	 */
 	public void ponerQueso(){
 		String opcion;
-		String o;
+		String aMinuscula;
 		boolean seguir = true;
 			while(seguir){
 				System.out.println("Dime papu, ¿quieres queso vegetariano en tu hamburguesa? Sí = s, No = n");
 				opcion = scan.nextLine();
-				o = opcion.toLowerCase();
+				aMinuscula = opcion.toLowerCase();
 			
-				if(o.equals("s")){
-				System.out.println("Como desees bro :v");
+				if(aMinuscula.equals("s")){
+				System.out.println("Como desees bro");
 					seguir = false;
-				}else if(o.equals("n")){
-					System.out.println("No pasa nada, lince. Igual estaba caducado xd");
+				}else if(aMinuscula.equals("n")){
+					System.out.println("No pasa nada. Habia caducado de todas formas");
 					seguir = false;
 				}	
 			}	
