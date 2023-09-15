@@ -29,7 +29,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void suspender(){
-		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede suspenderse de nuevo. ¿En qué pensabas?");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede suspenderse de nuevo. ¿En qué pensabas?\n");
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class ModoSuspendido implements EstadoRobot{
 		robot.activarRobot(true);
 		System.out.println("--- He sido activado ---");	
 		robot.asignarNuevoEstado(robot.modoCaminar());
-		System.out.println("--- Cambiando a modo C A M I N A R ---");
+		System.out.println("--- Cambiando a modo C A M I N A R ---\n");
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void caminar(){
-		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede caminar");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede caminar\n");
 	}
 
 	/**
@@ -61,24 +61,25 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void atender(){
-		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede atender");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede atender\n");
 	}
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Cocinar".
-	 * En este estado no puede hacer nada mas que cocinar la orden del cliente.
+	 * Metodo que hace que el robot prepare la orden del cliente. Cuando termina cambia al modo Entregar.
+         * Se muestran todos los pasos que el robot sigue para preparar la hamburguesa
+	 * En el modo Cocinar no puede hacer nada mas que cocinar la hamburguesa.
 	 *
 	 */
 	public void cocinar(){
-		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede cocinar");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede cocinar\n");
 	}
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Entregar".
-	 * Despues de enregar el pedido del cliente, regresa a su estado "Suspendido"
+	 * Metodo que hace que el robot entregue la hamburguesa al comensal.
+	 * Despues de entregar el pedido, regresa al modo "Suspendido".
 	 *
 	 */
 	public void entregar(){
-		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede entregar ordenes");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede entregar ordenes\n");
 	}
 }
