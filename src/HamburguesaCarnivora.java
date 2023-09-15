@@ -43,19 +43,19 @@ public class HamburguesaCarnivora extends Hamburguesa{
 	public void ponerQueso(){
 		
 		String opcion;
-		String o;
+		String aMinuscula;
 		boolean seguir = true;
 		
 			while(seguir){
-				System.out.println("Dime papu, ¿quieres queso en tu hamburguesa? Sí = s, No = n");
+				System.out.println("Dime papu, ¿quieres queso amarrillo en tu hamburguesa? Sí = s, No = n");
 				opcion = scan.nextLine();
-				o = opcion.toLowerCase();
+				aMinuscula = opcion.toLowerCase();
 			
-				if(o.equals("s")){
-				System.out.println("Le sabes. Sigues el ejemplo del gordo friki");
+				if(aMinuscula.equals("s")){
+				System.out.println("Si le sabes, bro");
 					seguir = false;
-				}else if(o.equals("n")){
-					System.out.println("No te preocupes, lince. No todos pueden tener buenos gustos :v");
+				}else if(aMinuscula.equals("n")){
+					System.out.println("No te preocupes. No todos pueden tener buenos gustos");
 					seguir = false;
 				}	
 			}	
