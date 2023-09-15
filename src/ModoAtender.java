@@ -18,7 +18,7 @@ public class ModoAtender implements EstadoRobot{
 	Robot robot;
 
 	/**
-	 * Constructor por parámetros del Modo Suspendido
+	 * Constructor por parámetros del Modo Atender
          * @param r El robot que será igual al atributo de la clase
 	 *
 	 */
