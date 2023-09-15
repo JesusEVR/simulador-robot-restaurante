@@ -50,7 +50,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void caminar(){
-		System.out.println(" ** MODO SUSPENDIDO ** \n En modo suspendido el robot no puede caminar");
+		System.out.println("** MODO SUSPENDIDO ** \n En modo suspendido el robot no puede caminar");
 	}
 
 	/**
