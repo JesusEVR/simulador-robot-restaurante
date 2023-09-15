@@ -40,7 +40,7 @@ public class ModoCaminar implements EstadoRobot{
 	 *
 	 */
 	public void activar(){
-		System.out.println("** MODO CAMINAR **\nYa estoy activo, papu. No puedo volver a activarme");
+		System.out.println("** MODO CAMINAR **\n--- Ya estoy activo, papu. No puedo volver a activarme ---");
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class ModoCaminar implements EstadoRobot{
 	 *
 	 */
 	public void atender(){
-		System.out.println("** MODO CAMINAR **\nEn modo caminar no puedo atenderte, estoy lejos de ti");	
+		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo atenderte, estoy lejos de ti ---");	
 	}
 
 	/**
