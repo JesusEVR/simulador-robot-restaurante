@@ -17,35 +17,35 @@ public interface EstadoRobot{
         public void suspender();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Activado".
-	 * En este estado puede caminar hacia el cliente que lo pida, o en su defecto suspenderse.
+	 * Metodo que activa al Robot
+	 * Pasa automáticamente al modo Maminar
 	 *
 	 */
 	public void activar();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Caminando".
+	 * Metodo que cambia el estado del Robot a "Caminar".
 	 * Lo unico que puede hacer en este estado es caminar o suspenderse.
 	 *
 	 */
 	public void caminar();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Atendiendo".
+	 * Metodo que cambia el estado del Robot a "Atender".
 	 * En este estado no puede hacer nada mas que atender al cliente.
 	 *
 	 */
 	public void atender();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Cocinando".
+	 * Metodo que cambia el estado del Robot a "Cocinar".
 	 * En este estado no puede hacer nada mas que cocinar la orden del cliente.
 	 *
 	 */
 	public void cocinar();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Entregando".
+	 * Metodo que cambia el estado del Robot a "Entregar".
 	 * Despues de enregar el pedido del cliente, regresa a su estado "Suspendido"
 	 *
 	 */
