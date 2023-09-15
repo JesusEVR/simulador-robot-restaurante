@@ -31,7 +31,7 @@ public class ModoCaminar implements EstadoRobot{
 	public void suspender(){
 		robot.asignarNuevoEstado(robot.modoSuspendido());
 		robot.activarRobot(false);
-		System.out.println("--- Cambiando a modo S U S P E N D I D O ---\nEs necesario volver a activar al robot.");
+		System.out.println("--- Cambiando a modo S U S P E N D I D O ---\nEs necesario volver a activar al robot.\n");
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class ModoCaminar implements EstadoRobot{
 	 *
 	 */
 	public void activar(){
-		System.out.println("** MODO CAMINAR **\n--- Ya estoy activo, papu. No puedo volver a activarme ---");
+		System.out.println("** MODO CAMINAR **\n--- Ya estoy activo, papu. No puedo volver a activarme ---\n");
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class ModoCaminar implements EstadoRobot{
 	public void caminar(){
 		System.out.println("--- He llegado a tu mesa, papu ---");
 		robot.asignarNuevoEstado(robot.modoAtender());
-		System.out.println("--- Cambiando a modo A T E N D E R ---");
+		System.out.println("--- Cambiando a modo A T E N D E R ---\n");
 	}
 
 	/**
@@ -62,24 +62,25 @@ public class ModoCaminar implements EstadoRobot{
 	 *
 	 */
 	public void atender(){
-		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo atenderte, estoy lejos de ti ---");	
+		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo atenderte, estoy lejos de ti ---\n");	
 	}
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Cocinar".
-	 * En este estado no puede hacer nada mas que cocinar la orden del cliente.
+	 * Metodo que hace que el robot prepare la orden del cliente. Cuando termina cambia al modo Entregar.
+         * Se muestran todos los pasos que el robot sigue para preparar la hamburguesa
+	 * En el modo Cocinar no puede hacer nada mas que cocinar la hamburguesa.
 	 *
 	 */
 	public void cocinar(){
-		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo cocinarte, ni me has ordenado algo we ---");
+		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo cocinarte, ni me has ordenado algo we ---\n");
 	}
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Entregar".
-	 * Despues de enregar el pedido del cliente, regresa a su estado "Suspendido"
+	 * Metodo que hace que el robot entregue la hamburguesa al comensal.
+	 * Despues de entregar el pedido, regresa al modo "Suspendido"
 	 *
 	 */
 	public void entregar(){
-		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo entregarte algo porque no he cocinado nada. A menos que quieras algo de aceite ---");
+		System.out.println("** MODO CAMINAR **\n--- En modo caminar no puedo entregarte algo porque no he cocinado nada. A menos que quieras algo de aceite ---\n");
 	}
 }
