@@ -48,7 +48,7 @@ public class Principal{
 			Scanner sc = new Scanner(System.in);
 		int opcion;
 
-		System.out.println("Muy buenos dias, tardes o noches. señor usuario. ¡Bienvenido a Mcburguesas!\n");
+		System.out.println("Muy buenos dias, tardes o noches. señor usuario. ¡Bienvenido a McBurguesas!\n");
 		System.out.println("Nuestro robot mesero (y cocinero) se encuentra en Modo Suspendido.\nA continuacion las acciones que puede hacer\n");
 
 		do{
