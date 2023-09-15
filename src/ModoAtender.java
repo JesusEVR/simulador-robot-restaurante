@@ -32,7 +32,7 @@ public class ModoAtender implements EstadoRobot{
 	 *
 	 */
 	public void suspender(){
-		System.out.println("** MODO ATENDER **\n--- En modo atender no puedo suspenderme. ¿Para qué me llamaste entonces? ---");
+		System.out.println("** MODO ATENDER **\n--- En modo atender no puedo suspenderme ---\n");
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class ModoAtender implements EstadoRobot{
 	 *
 	 */
 	public void activar(){
-		System.out.println("** MODO ATENDER **\n--- Ya estoy activo hermanito, por algo estoy junto a ti ---");
+		System.out.println("** MODO ATENDER **\n--- Ya estoy activo hermanito, por algo estoy junto a ti ---\n");
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class ModoAtender implements EstadoRobot{
 	 *
 	 */
 	public void caminar(){
-		System.out.println("** MODO ATENDER **\n--- Ya he caminado hasta tu mesa, papu. ¿O sera que no soy lo suficientemente notorio?");
+		System.out.println("** MODO ATENDER **\n--- Ya he caminado hasta tu mesa, papu. ¿O sera que no soy lo suficientemente notorio?\n");
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class ModoAtender implements EstadoRobot{
 		robot.orden(opcion); // Aqui se registra la orden 
 		robot.puedeCocinar(true);
 		robot.asignarNuevoEstado(robot.modoCocinar());
-		System.out.println("--- Cambiando a modo C O C I N A R ---");
+		System.out.println("--- Cambiando a modo C O C I N A R ---\n");
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class ModoAtender implements EstadoRobot{
 	 *
 	 */
 	public void cocinar(){
-		System.out.println("** MODO ATENDER **\n--- No puedo cocinar si aún no ordenas ---");
+		System.out.println("** MODO ATENDER **\n--- No puedo cocinar si aún no ordenas ---\n");
 	}
 
 	/**
@@ -100,6 +100,6 @@ public class ModoAtender implements EstadoRobot{
 	 *
 	 */
 	public void entregar(){
-		System.out.println("** MODO ATENDER **\n--- No puedo entregarte tu platillo si aún no lo ordenas ---");
+		System.out.println("** MODO ATENDER **\n--- No puedo entregarte tu platillo si aún no lo ordenas ---\n");
 	}
 }
