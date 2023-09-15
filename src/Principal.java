@@ -1,9 +1,12 @@
 import java.util.Scanner;
-public class prueba{
+
+public class Principal{
 	
 	public static void main(String[] args){
+
 		Hamburguesa h = new HamburguesaCarnivora("00","ham01", "hamburguesa de res", 12.4, false, "res");
 		Hamburguesa h2 = new HamburguesaVegetariana("01","ham02", "hamburguesa de tofu", 12.4, true, "tofu");
+		
 		/*System.out.println(h);
 		h.prepararHamburguesa();
 		System.out.println(" ");
@@ -45,7 +48,8 @@ public class prueba{
 			Scanner sc = new Scanner(System.in);
 		int opcion;
 
-		
+		System.out.println("Muy buenos dias, tardes o noche señor usuario. ¡Bineveniodo a Mcburguesas!");
+		System.out.println("Nuestro robot mesero y cocinero se encuentra en Modo Suspendido.\n¡A continuacion las acciones que puede hacer!");
 
 		do{
 			System.out.println("Por favor elige la opcion "
