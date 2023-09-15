@@ -75,9 +75,9 @@ public class ModoAtender implements EstadoRobot{
 				if(opcion.toUpperCase().contains("MG") || opcion.toUpperCase().contains("MD") || opcion.toUpperCase().contains("ML")){ 
 					if(opcion.contains("01") || opcion.contains("02") || opcion.contains("03")){ 
 						idCorrecta = true;
-					}else{ System.out.println("1 Esa opcion es inválida, seleccione una del menú");}	
-				}else{System.out.println("2 Esa opcion es inválida, seleccione una del menú");}
-			}else{ System.out.println("3 Esa opcion es inválida, seleccione una del menú");}
+					}else{ System.out.println("Esa opcion es inválida, seleccione una del menú");}	
+				}else{System.out.println("Esa opcion es inválida, seleccione una del menú");}
+			}else{ System.out.println("Esa opcion es inválida, seleccione una del menú");}
 		} // Fin del ciclo while
 		
 		robot.orden(opcion); // Aqui se registra la orden 
