@@ -38,7 +38,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 *
 	 */
 	public void activar(){
-		System.out.println("** Robot Activado **")	
+		System.out.println("** Robot Activado **");	
 		robot.asignarNuevoEstado(robot.modoCaminar());
 		System.out.println("--- Cambiando a modo C A M I N A R ---\n");
 	}
