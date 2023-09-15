@@ -17,15 +17,15 @@ public interface EstadoRobot{
         public void suspender();
 
 	/**
-	 * Metodo que activa al Robot
-	 * Pasa automáticamente al modo Caminar
+	 * Metodo que activa al Robot.
+	 * Pasa automáticamente al modo Caminar.
 	 *
 	 */
 	public void activar();
 
 	/**
-	 * Metodo que cambia el estado del Robot a "Caminar".
-	 * Lo unico que puede hacer en este estado es caminar o suspenderse.
+	 * Metodo que hace que el Robot se acerque a la mesa del cliente, mientras esta en modo Caminar.
+	 * Lo unico que puede hacer mientras se acerca, o camina, es suspenderse.
 	 *
 	 */
 	public void caminar();
