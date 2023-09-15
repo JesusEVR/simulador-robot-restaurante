@@ -11,7 +11,7 @@ public interface EstadoRobot{
 	
 	/**
 	 * Metodo que cambia el estado del Robot a "Suspendido".
-	 * Lo unico que puede hacer en este estado es activarse.
+	 * Lo unico que puede hacer en dicho estado es activarse.
 	 *
 	 */
         public void suspender();
