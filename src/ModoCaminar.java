@@ -30,7 +30,6 @@ public class ModoCaminar implements EstadoRobot{
 	 */
 	public void suspender(){
 		robot.asignarNuevoEstado(robot.modoSuspendido());
-		robot.activarRobot(false);
 		System.out.println("--- Cambiando a modo S U S P E N D I D O ---\nEs necesario volver a activar al robot.\n");
 	}
 
