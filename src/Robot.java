@@ -95,11 +95,11 @@ public class Robot{
 	
 	public void imprimeMenu(){
 		System.out.println("-> Con gusto te mostraré nuestro menú");
-		System.out.println("**** M E N U    G E N E R A L  ****");
+		System.out.println("\n**** M E N U    G E N E R A L  ****");
 		menuGeneral();
-		System.out.println("**** M E N U    D E L   D I A ****");
+		System.out.println("\n**** M E N U    D E L   D I A ****");
 		menuDelDia();
-		System.out.println("**** M E N U    D E   L U J O ****");
+		System.out.println("\n**** M E N U    D E   L U J O ****");
 		menuDeLujo();
 	}
 	
