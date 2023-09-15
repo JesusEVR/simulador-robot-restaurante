@@ -48,8 +48,8 @@ public class Principal{
 			Scanner sc = new Scanner(System.in);
 		int opcion;
 
-		System.out.println("Muy buenos dias, tardes o noche señor usuario. ¡Bineveniodo a Mcburguesas!");
-		System.out.println("Nuestro robot mesero y cocinero se encuentra en Modo Suspendido.\n¡A continuacion las acciones que puede hacer!\n");
+		System.out.println("Muy buenos dias, tardes o noches. señor usuario. ¡Bienvenido a Mcburguesas!\n");
+		System.out.println("Nuestro robot mesero (y cocinero) se encuentra en Modo Suspendido.\nA continuacion las acciones que puede hacer\n");
 
 		do{
 			System.out.println("Por favor, inserta el numero de la opcion "
@@ -105,7 +105,7 @@ public class Principal{
 						r.entregar();
 						break;
 					case 0:
-						System.out.println("\n¡Esperamos verlo nuevamente en McBurguesas!.");
+						System.out.println("\n¡Hasta pronto! ¡Esperamos verlo nuevamente en McBurguesas!");
 						break;
 
 					default:
