@@ -54,13 +54,13 @@ public class Principal{
 		do{
 			System.out.println("Por favor elige la opcion "
 							+ "que deseas ejecutar.\n" + 
-							"1.- Suspender.\n" +
-							"2.- Activar.\n" + 
-							"3.- Caminar.\n" + 
-							"4.- Atender.\n" +
-							"5.- Cocinar.\n" +
+							"1.- Suspender\n" +
+							"2.- Activar\n" + 
+							"3.- Caminar\n" + 
+							"4.- Atender\n" +
+							"5.- Cocinar\n" +
 							"6.- Entregar \n"+			   
-							"0.- Terminar simulacion.\n");
+							"0.- Salir del restaurante\n");
 					
 				while (true){
 					try {
@@ -70,13 +70,13 @@ public class Principal{
 					}catch (NumberFormatException ex){
 						System.out.println("Por favor elige la opcion VALIDA "
 							+ "que deseas ejecutar.\n" + 
-							"1.- Suspender.\n" +
-							"2.- Activar.\n" + 
-							"3.- Caminar.\n" + 
-							"4.- Atender.\n" +
-							"5.- Cocinar.\n" +
+							"1.- Suspender\n" +
+							"2.- Activar\n" + 
+							"3.- Caminar\n" + 
+							"4.- Atender\n" +
+							"5.- Cocinar\n" +
 							"6.- Entregar \n"+			   
-							"0.- Terminar simulacion.\n");
+							"0.- Salir del restaurante\n");
 					}
 				}
 
