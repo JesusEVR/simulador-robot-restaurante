@@ -56,6 +56,7 @@ public class ModoSuspendido implements EstadoRobot{
 	/**
 	 * Metodo que cambia el estado del Robot a "Atender".
 	 * En este estado no puede hacer nada mas que atender al cliente.
+         * Al llegar a la mesa del cliente, cambia al modo Atender.
 	 *
 	 */
 	public void atender(){
