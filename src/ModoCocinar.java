@@ -68,8 +68,7 @@ public class ModoCocinar implements EstadoRobot{
 	 *
 	 */
 	public void cocinar(){
-		
-		if(robot.puedeCocinar()){ //aqui se busca la hamburguesa y se llama al metodo prepararHamburguesa()
+		if(robot.puedeCocinar()){ 
 			System.out.println("--- Preparando ando tu burger ---\n");
 			robot.ordenDelCliente();
 			Hamburguesa orden = robot.obtenerPedido();
