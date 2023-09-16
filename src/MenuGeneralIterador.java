@@ -9,7 +9,7 @@
  */
 
 public class MenuGeneralIterador implements Iterador{
-	private Hamburguesa[] hamburguesasGeneral;
+	private Object[] hamburguesasGeneral;
 	private int posicion = 0;
 
 	/**
@@ -17,7 +17,7 @@ public class MenuGeneralIterador implements Iterador{
      * 
      * @param hamburguesasGeneral Arreglo de hamburguesas del menú general
      */
-	public MenuGeneralIterador(Hamburguesa[] hamburguesasGeneral){
+	public MenuGeneralIterador(Object[] hamburguesasGeneral){
 		this.hamburguesasGeneral = hamburguesasGeneral;
 	}
 
@@ -36,8 +36,8 @@ public class MenuGeneralIterador implements Iterador{
 	}
 
 	@Override 
-	public Hamburguesa next(){
-		Hamburguesa hamGeneral = hamburguesasGeneral[posicion];
+	public Object next(){
+		Object hamGeneral = hamburguesasGeneral[posicion];
 		posicion += 1;
 		return hamGeneral;
 	}
