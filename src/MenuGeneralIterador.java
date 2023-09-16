@@ -45,8 +45,8 @@ public class MenuGeneralIterador implements Iterador{
 	@Override
 	public void remove(){
 		if (posicion > 0 && posicion <= hamburguesasGeneral.length){
-        	hamburguesasGeneral[posicion - 1] = null; // Elimina el elemento en la posición actual
-        	posicion--; // Ajusta la posición del iterador después de eliminar
+        	hamburguesasGeneral[posicion - 1] = null; 
+        	posicion--; 
     	} else {
         	throw new IllegalStateException("No se puede llamar a remove() antes de next() o después de haber llegado al final.");
     	}
