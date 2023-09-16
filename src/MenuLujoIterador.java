@@ -1,6 +1,8 @@
-import java.util.Enumeration;
+
 import java.util.Hashtable;
 import java.util.NoSuchElementException;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Clase que implementa un iterador para el Menu de Lujo.
@@ -12,26 +14,31 @@ import java.util.NoSuchElementException;
  *
  */
 public class MenuLujoIterador implements Iterador{
-	private Enumeration<Hamburguesa> numeracion;
+	private Hashtable<String, Object> hamburguesasDeLujo;
+	private Iterator<Map.Entry<String, Object>> it;
+	private Map.Entry<String, Object> entradaActual;
+
 
 	/**
      * Constructor de la clase MenuLujoIterador
      * 
      * @param hamburguesasDeLujo Enumeracion de hamburguesas del menu de Lujo
      */
-	public MenuLujoIterador(Hashtable<String, Hamburguesa> hamburguesasDeLujo){
-		numeracion = hamburguesasDeLujo.elements();
+	public MenuLujoIterador(Hashtable<String, Object> hamburguesasDeLujo){
+		this.hamburguesasDeLujo = hamburguesasDeLujo;
+		this.it = hamburguesasDeLujo.entrySet().iterator();
 	}
 
 	@Override
 	public boolean hasNext(){
-		return numeracion.hasMoreElements();
+		return it.hasNext();
 	}
 
 	@Override 
-	public Hamburguesa next(){
+	public Object next(){
 		if (hasNext()){
-			return numeracion.nextElement();
+			entradaActual = it.next();
+			return entradaActual.getValue();
 		}
 		else{
 			throw new NoSuchElementException("No hay mas elementos en el menu.");
@@ -40,6 +47,12 @@ public class MenuLujoIterador implements Iterador{
 
 	@Override
 	public void remove(){
-		throw new UnsupportedOperationException("Remove no está soportado para Hashtable.");
+		if (entradaActual != null) {
+			it.remove();
+			entradaActual = null;
+		}
+		else {
+			throw new UnsupportedOperationException("next() no ha sido llamado o remove() ya ha sido llamado después de la última llamada a next().");
+		}
 	}
 }
