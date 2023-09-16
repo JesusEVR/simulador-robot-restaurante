@@ -13,25 +13,25 @@ public class MenuDelDia implements Menu{
 	/**
 	* Estructura de datos para el menu del dia
 	*/
-	private ArrayList<Hamburguesa> menuDelDia;
+	public ArrayList<Object> menuDelDia;
 	
 	/**
 	* Constructor por omisión que inicializa el menú el dia 
 	*/
 	public MenuDelDia(){
-		menuDelDia = new ArrayList<Hamburguesa>();
+		menuDelDia = new ArrayList<Object>();
 		Hamburguesa h1 = new HamburguesaVegetariana("MD01", "vegetariana", "burger", 45.0, true, "algas");
-		agregarHamburguesa(h1);
+		agregarHamburguesa((Object) h1);
 		Hamburguesa h2 = new HamburguesaCarnivora("MD02", "carnivora", "burger", 45.0, false, "res");
-		agregarHamburguesa(h2);
+		agregarHamburguesa((Object) h2);
 		Hamburguesa h3 = new HamburguesaCarnivora("MD03", "carnivora", "burger", 45.0, false, "pollo");
-		agregarHamburguesa(h3);
+		agregarHamburguesa((Object) h3);
 	}
 	
 	/**
 	* Metodo que añade hamburgesas al menú
 	*/
-	public void agregarHamburguesa(Hamburguesa h){
+	public void agregarHamburguesa(Object h){
 		menuDelDia.add(h);
 	}
 	
