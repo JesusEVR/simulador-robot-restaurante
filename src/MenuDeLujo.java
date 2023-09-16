@@ -13,24 +13,24 @@ public class MenuDeLujo implements Menu{
 	/**
 	* Estructura de datos para el menu de lujo
 	*/
-	private Hashtable<String , Hamburguesa> menuDeLujo = new Hashtable<String , Hamburguesa>(); 
+	private Hashtable<String , Object> menuDeLujo = new Hashtable<String , Object>(); 
 		
 	/**
 	* Constructor por omisión que inicializa el menú de lujo 
 	*/
 	public MenuDeLujo(){
 		Hamburguesa h1 = new HamburguesaVegetariana("ML01", "prueba", "burgerV", 45.0, true, "tofu");
-		agregarHamburguesa(h1.obtenerID(), h1);	
+		agregarHamburguesa(h1.obtenerID(), (Object) h1);	
 		Hamburguesa h2 = new HamburguesaVegetariana("ML02", "prueba", "vevfvef", 45.0, true, "tofu");
-		agregarHamburguesa(h2.obtenerID(), h2);	
+		agregarHamburguesa(h2.obtenerID(), (Object) h2);	
 		Hamburguesa h3 = new HamburguesaVegetariana("ML03", "prueba", "ffveve", 45.0, true, "tofu");
-		agregarHamburguesa(h3.obtenerID(), h3);	
+		agregarHamburguesa(h3.obtenerID(), (Object) h3);	
 	}
 	
 	/**
 	* Metodo que añade hamburgesas al menú
 	*/
-	public void agregarHamburguesa(String ID, Hamburguesa h){
+	public void agregarHamburguesa(String ID, Object h){
 		menuDeLujo.put(ID, h);
 	}
 	
