@@ -78,7 +78,7 @@ public class ModoAtender implements EstadoRobot{
 					}else{ System.out.println("Esa opcion es inválida, seleccione una del menú");}	
 				}else{System.out.println("Esa opcion es inválida, seleccione una del menú");}
 			}else{ System.out.println("Esa opcion es inválida, seleccione una del menú");}
-		} // Fin del ciclo while
+		} 
 		
 		robot.orden(opcion); // Aqui se registra la orden 
 		robot.puedeCocinar(true);
