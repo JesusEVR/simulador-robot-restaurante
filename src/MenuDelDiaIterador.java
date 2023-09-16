@@ -29,35 +29,15 @@ public class MenuDelDiaIterador implements Iterador{
 	@Override
 	public boolean hasNext(){
 		return it.hasNext();
-		/*
-		if(posicion >= hamburguesasDelDia.size()){
-			return false;
-		}
-		else{
-			return true;
-		}*/
 	}
 
 	@Override 
 	public Object next(){
 		return it.next();
-		/*
-		Object hamDelDia = hamburguesasDelDia.get(posicion);
-		posicion += 1;
-		return hamDelDia;
-		*/
 	}
 
 	@Override
 	public void remove(){
 		it.remove();
-		/*
-		if (posicion > 0 && posicion <= hamburguesasDelDia.size()){
-        	hamburguesasDelDia.remove(posicion - 1); // Elimina el elemento en la posición actual
-        	posicion--; // Ajusta la posición del iterador después de eliminar
-    	} else {
-        	throw new IllegalStateException("No se puede llamar a remove() antes de next() o después de haber llegado al final.");
-    	}
-    	*/
 	}
 }
