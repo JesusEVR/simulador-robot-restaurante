@@ -22,7 +22,7 @@ public class MenuGeneral implements Menu{
 	* Constructor por omisión que inicializa el menú general 
 	*/
 	public MenuGeneral(){
-	 	Hamburguesa h1 = new HamburguesaCarnivora("MG01", "PRUEBA", "Hamburguesa de prueba",17.8, false, "res");
+	 	Hamburguesa h1 = new HamburguesaVegetariana("MG01", "Hamburguesa Azuki", "Pan integral, mayonesa estilo japonés, carne de arroz integral mezclado con judías azuki y trozos de alga kombu, mostaza, catsup, pepinillos y setas hervidas",68.0, true, "judias azuki");
 		agregarHamburguesa(h1);
 		Hamburguesa h2 = new HamburguesaCarnivora("MG02", "prueba", "Hamburguesa de prueba",17.8, false, "res");
 		agregarHamburguesa(h2);
