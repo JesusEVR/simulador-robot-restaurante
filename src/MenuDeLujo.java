@@ -21,7 +21,7 @@ public class MenuDeLujo implements Menu{
 	public MenuDeLujo(){
 		Hamburguesa h1 = new HamburguesaVegetariana("ML01", "prueba", "burgerV", 45.0, true, "tofu");
 		agregarHamburguesa(h1.obtenerID(), (Object) h1);	
-		Hamburguesa h2 = new HamburguesaVegetariana("ML02", "prueba", "vevfvef", 45.0, true, "tofu");
+		Hamburguesa h2 = new HamburguesaCarnivora("ML02", "Hamburguesa dos torres", "Pan rústico, mayonesa al ajo de la casa, colchon de lechuga y jitomate fresco, doble carne de ternera, pepinillos, mostaza, catsup, cebollla caramelizada", 78.0, false, "ternera");
 		agregarHamburguesa(h2.obtenerID(), (Object) h2);	
 		Hamburguesa h3 = new HamburguesaVegetariana("ML03", "prueba", "ffveve", 45.0, true, "tofu");
 		agregarHamburguesa(h3.obtenerID(), (Object) h3);	
