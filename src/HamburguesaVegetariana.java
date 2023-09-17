@@ -24,12 +24,12 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	 * Constructor por parametros de la hamburguesa vegetariana
          *
          * @param id Cadena que contiene la ID de cada hamburguesa
-	 * @param nombre Cadena con el nombre de la hamburguesa
+	 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
          * @param precio El costo de cada hamburguesa (en pesos mexicanos)
          * @param tieneQueso Un valor booleano que detalla si la hamburguesa tiene queso (1) o no (0)
          * @param esVegetariano Un valor booleano que detalla si la hamburguesa es vgetariana (1) o no lo es (0)
-	 * @param tipoCarne El tipo de carne que tendra la hamburguesa
+	 	 * @param tipoCarne El tipo de carne que tendra la hamburguesa
 	 */
 	public HamburguesaVegetariana(String id, String nombre, String descripcion, double precio, boolean tieneQueso, boolean esVegetariano, String tipoCarne){
 		super(id, nombre, descripcion, precio, tieneQueso, esVegetariano);
