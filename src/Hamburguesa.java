@@ -196,10 +196,15 @@ public abstract class Hamburguesa{
 	}
 
 	/**
-	 * Metodo abstracto que detalla que se esta poniendo el queso (vegetariano o no) de la hamburguesa
+	 * Metodo que detalla que se esta poniendo queso en la hamburguesa, en caso de llevarlo
          *
 	 */
-	public abstract void ponerQueso();
+	public void ponerQueso(){
+		if(this.tieneQueso = true){
+			System.out.println("--- Colocando el queso, ando en eso ---");
+		}else{
+			System.out.println("--- Como la hamburguesa no lleva queso, saltaremos eso ---");
+	}
 
 	/**
 	 * Metodo abstracto que detalla que se esta preparando la carne (vegetariano o no) de la hamburguesa
