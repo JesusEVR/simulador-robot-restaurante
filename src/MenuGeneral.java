@@ -22,13 +22,12 @@ public class MenuGeneral implements Menu{
 	* Constructor por omisión que inicializa el menú general 
 	*/
 	public MenuGeneral(){
-	 	Hamburguesa h1 = new HamburguesaVegetariana("MG01", "Hamburguesa Azuki", "Pan integral, mayonesa estilo japonés, carne de arroz integral mezclado con judías azuki y trozos de alga kombu, mostaza, catsup, pepinillos y setas hervidas", 68.0, false, true, "judias azuki");
+	 	Hamburguesa h1 = new HamburguesaVegetariana("MG01", "Hamburguesa Azuki", "Pan integral, mayonesa estilo japonés, carne de arroz integral mezclado con judías azuki y trozos de alga kombu, mostaza, catsup, pepinillos y setas hervidas", 60.0, false, true, "judias azuki");
 		agregarHamburguesa(h1);
-		Hamburguesa h2 = new HamburguesaCarnivora("MG02", "prueba", "Hamburguesa de prueba",17.8, true, false, "res");
+		Hamburguesa h2 = new HamburguesaCarnivora("MG02", "McBurguesa tradicional", "Pan blando, mayonesa tradicional, carne de cerdo a tres cuartos, lechuga freca, queso amarillo, mostaza y catsup", 45.0, true, false, "cerdo");
 		agregarHamburguesa(h2);
-		Hamburguesa h3 = new HamburguesaCarnivora("MG03", "prueba", "Hamburguesa de prueba",17.8, false, false, "res");
+		Hamburguesa h3 = new HamburguesaCarnivora("MG03", "nombre", "descripcion", 50.0, false, false, "carne");
 		agregarHamburguesa(h3);
-		
 	}
 	
 	/**
