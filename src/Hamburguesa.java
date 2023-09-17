@@ -25,6 +25,10 @@ public abstract class Hamburguesa{
 	 */
 	double precio;
 	/**
+	 * Si la hamburguesa tiene queso o no 
+	 */
+	boolean tieneQueso;
+	/**
 	 * Si es una hambuguesa vegetariana o no 
 	 */
 	boolean esVegetariano;
@@ -36,13 +40,15 @@ public abstract class Hamburguesa{
 	 * @param nombre Cadena con el nombre de la hamburguesa
          * @param descripcion Cadena que contiene una breve descripcion de la hamburguesa
          * @param precio El costo de cada hamburguesa (en pesos mexicanos)
+	 * @param tieneQueso Un valor booleano que detalla si la hamburguesa tiene queso (1) o no (0)
          * @param esVegetariano Un valor booleano que detalla si la hamburguesa es vgetariana (1) o no lo es (0)
 	 */
-	public Hamburguesa(String id, String nombre, String descripcion, double precio, boolean esVegetariano){
+	public Hamburguesa(String id, String nombre, String descripcion, double precio, boolean tieneQueso, boolean esVegetariano){
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
+		this.tieneQueso = tieneQueso;
 		this.esVegetariano = esVegetariano;
 	}
 
@@ -118,6 +124,28 @@ public abstract class Hamburguesa{
 		precio = p;
 	}
 
+	/**
+	 * Metodo que devuelve si una hamburguesa tiene queso o no
+	 * 
+	 * @return '1' si la hamburguesa tiene queso, '0' en el caso contrario
+	 */
+	public boolean tieneQueso(){
+		return tieneQueso;
+	}
+
+	/**
+	 * Metodo auxiliar para el metodo toString
+	 * 
+	 * @return Un cadena detallando si la hamburguesa tiene queso o no
+	 */
+	public String auxiliarDeQueso(){
+		if(this.tieneQueso()) {
+			return "Tiene queso";
+		} else {
+			return "No tiene queso";
+		}
+	}
+	
 	/**
 	 * Metodo que devuelve si una hamburguesa es vegetariana o no
 	 * 
@@ -207,7 +235,7 @@ public abstract class Hamburguesa{
 	 * @return La cadena con la informacion de la hamburguesa
 	 */
 	public String toString(){
-		if(esVegetariano()) return "---"+id + " Hamburguesa vegetariana " +nombre +"---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio;
-		return "---"+id + "  Hamburguesa carnivora " +nombre+"---"+"\n" + "Descripcion: " +descripcion +"\n" +"Precio: $" + precio;
+		if(esVegetariano()) return "--- "+id + " Hamburguesa vegetariana de nombre " +nombre +" ---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio +"\n" + this.auxiliarDeQueso();
+		return "--- "+id + " Hamburguesa carnivora de nombre " +nombre +" ---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio +"\n" + this.auxiliarDeQueso();	
 	}
 }
