@@ -200,10 +200,11 @@ public abstract class Hamburguesa{
          *
 	 */
 	public void ponerQueso(){
-		if(this.tieneQueso = true){
+		if(this.tieneQueso()){
 			System.out.println("--- Colocando el queso, ando en eso ---");
 		}else{
 			System.out.println("--- Como la hamburguesa no lleva queso, saltaremos eso ---");
+		}
 	}
 
 	/**
@@ -240,7 +241,7 @@ public abstract class Hamburguesa{
 	 * @return La cadena con la informacion de la hamburguesa
 	 */
 	public String toString(){
-		if(esVegetariano()) return "--- "+id + " Hamburguesa vegetariana de nombre " +nombre +" ---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio +"\n" + this.auxiliarDeQueso();
-		return "--- "+id + " Hamburguesa carnivora de nombre " +nombre +" ---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio +"\n" + this.auxiliarDeQueso();	
+		if(esVegetariano()) return "--- ID: "+id + " | Hamburguesa vegetariana de nombre: " +nombre +" ---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio +"\n" + this.auxiliarDeQueso();
+		return "--- ID: "+id + " | Hamburguesa carnivora de nombre: " +nombre +" ---"+"\n"  + "Descripcion: "+descripcion +"\n" +"Precio: $" + precio +"\n" + this.auxiliarDeQueso();	
 	}
 }
