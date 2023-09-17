@@ -4,12 +4,8 @@ public class Principal{
 	
 	public static void main(String[] args){
 		
-		Menu m1 = new MenuGeneral();
-		Menu m2 = new MenuDelDia();
-		Menu m3 = new MenuDeLujo();
-	
-		Robot r = new Robot(m1, m2, m3);
-			Scanner sc = new Scanner(System.in);
+		Robot r = new Robot();
+		Scanner sc = new Scanner(System.in);
 		int opcion;
 
 		System.out.println("Muy buenos dias, tardes o noches. señor usuario. ¡Bienvenido a McBurguesas!\n");
