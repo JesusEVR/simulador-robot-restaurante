@@ -20,7 +20,7 @@ public class MenuDelDia implements Menu{
 	*/
 	public MenuDelDia(){
 		menuDelDia = new ArrayList<Object>();
-		Hamburguesa h1 = new HamburguesaVegetariana("MD01", "vegetariana", "burger", 45.0, true, "algas");
+		Hamburguesa h1 = new HamburguesaVegetariana("MD01", "Hamburguesa Veggie", "Pan integral, mayonesa de betabel,  calabacitas, milanesa de soja, zanahoria rallada y chile morron", 45.0, true, "soja");
 		agregarHamburguesa((Object) h1);
 		Hamburguesa h2 = new HamburguesaCarnivora("MD02", "carnivora", "burger", 45.0, false, "res");
 		agregarHamburguesa((Object) h2);
