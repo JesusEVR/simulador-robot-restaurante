@@ -1,19 +1,73 @@
+/**
+* Clase que define el comportamiento del robot cuando es mesero o cocinero
+*
+* @author paolasanv
+* @author Supr-Lilito
+* @author JesusEVR
+* @version Septiembre 2023
+*/
+
 public class Robot{
-	
-	private EstadoRobot estadoActual;  //estado actual del robot
+	/**
+	* Robot en su estado actual
+	*/
+	private EstadoRobot estadoActual; 
+	/**
+	* Robot en modo suspendido
+	*/
 	private EstadoRobot modoSuspendido;
+	/**
+	* Robot en su modo aminar
+	*/
 	private EstadoRobot modoCaminar;
+	/**
+	* Robot en su modo atender
+	*/
 	private EstadoRobot modoAtender;
+	/**
+	* Robot en su modo cocinar
+	*/
 	private EstadoRobot modoCocinar;
+	/**
+	* Robot en su modo entregar
+	*/
 	private EstadoRobot modoEntregar;
-	private boolean puedeCocinar; //se vuelve true despues de llamar a atender()
-	private boolean yaCocino; //se hace true despues de haber llamado a cocinar() y se hace false despues de llamar a entregar()
+	/**
+	* Verifica si el robot puede cocinar despues de que el cliente ordenó
+	*/
+	private boolean puedeCocinar; 
+	/**
+	* Verifica si el robot ya cocinó la orden
+	*/
+	private boolean yaCocino; 
+	/**
+	* Menu especial del restaurante
+	*/
 	private Menu menuDeLujo;
+	/**
+	* Menu del dia del restaurante
+	*/
 	private Menu menuDelDia;
+	/**
+	* Menu general del restaurante
+	*/
 	private Menu menuGeneral;
+	/**
+	* Guarda el ID de la hamburguesa que el cliente ordenó
+	*/
 	private String orden = "";
+	/**
+	* Guarda la hamburguesa que el cliente ordenó
+	*/
 	private Hamburguesa burgerCliente;
-	
+
+	/**
+	* Constructor que inicializar el robor en modo suspendido 
+ 	* y recibe como parametros los menu del restaurante
+        *@param Menu general 
+        *@param Menu delDia
+        *@param Menu deLujo
+	*/
 	public Robot(Menu general, Menu delDia, Menu deLujo){
 		modoSuspendido= new ModoSuspendido(this);
 		modoCaminar = new ModoCaminar(this);
@@ -28,71 +82,134 @@ public class Robot{
 		menuDeLujo = deLujo;
 	}
 	
-	public void yaCocino(boolean c){ //verifica si ya cocinó la orden del cliente
+       /**
+       * Metodo que asigna true si el robot ya cocinó la orden del cliente, asigna false en caso contrario
+       *
+       * @param c       
+       */
+	public void yaCocino(boolean c){ 
 		yaCocino=c;
 	}
 	
+       /**
+       * Metodo que devuelve true si el robot ya coció la orden del cliente, false en caso contrario
+       *       
+       *@return yaCocino
+       */
 	public boolean yaCocino(){
 		return yaCocino;
 	}
 	
-	public void puedeCocinar(boolean p){  //asigna true si el robot ya cocinó despues de que el cliente ordenó
+       /**
+       * Metodo que asigna true cuando el robot ya cocinó despues de que el cliente ordenó
+       *     
+       *@param p
+       */
+	public void puedeCocinar(boolean p){ 
 		puedeCocinar = p; 
 	}
-	
-	public boolean puedeCocinar(){ //verifica si el robot puede cocinar despues de que el cliente ha ordenado
+       /**
+       * Método que devulve true si el robot puede cocinar después de que el cliente ha ordenado, false en caso contrario
+       *       
+       *@return puedeCocinar
+       */
+	public boolean puedeCocinar(){ 
 		return puedeCocinar;
 	}
 	
+       /**
+       * Método que llama a activar() según el modo actual del robot       
+       */
 	public void activar(){
 		estadoActual.activar();
 	}
 	
+       /**
+       * Método que llama a atender() según el modo actual del robot  
+       */
 	public void atender(){
 		estadoActual.atender();
 	}
-	
+       /**
+       *  Método que llama a cocinar() según el modo actual del robot     
+       */
 	public void cocinar(){
 		estadoActual.cocinar();
 	}
-	
+       /**
+       * Método que llama a entregar() según el modo actual del robot 
+       */
 	public void entregar(){
 		estadoActual.entregar();
 	}
-	
+       /**
+       *  Método que llama a suspender() según el modo actual del robot     
+       */
 	public void suspender(){
 		estadoActual.suspender();
 	}
-	
+       /**
+       * Método que llama a caminar() según el modo actual del robot     
+       */
 	public void caminar(){
 		estadoActual.caminar();
 	}
-	
+       /**
+       * Método que asigna un nuevo modo al robot
+       *
+       * @param nuevoEstado       
+       */
 	public void asignarNuevoEstado(EstadoRobot nuevoEstado){
 		estadoActual = nuevoEstado;
 	}
 	
-	//Estos metodos solo devuelven un modo del robot para fines practicos (se usan en las clases ModoAtender/ModoCaminar.. etc)
+       /**
+       *  Devuelve un robot en modo suspendido 
+       *
+       *@retrun modoSuspendido
+       */
 	public EstadoRobot modoSuspendido(){
 		return modoSuspendido;
 	}
-	
+       /**
+       * Devuelve un robot en modo caminar
+       *
+       *@retrun modoCaminar
+       */
 	public EstadoRobot modoCaminar(){
 		return modoCaminar;
 	}
 	
+       /**
+       * Devuelve un robot en modo atender   
+       *
+       *@retrun modoAtender
+       */
 	public EstadoRobot modoAtender(){
 		return modoAtender;
 	}
 
+       /**
+       * Devuelve un robot en modo cocinar   
+       *
+       *@retrun modoCocinar
+       */
 	public EstadoRobot modoCocinar(){
 		return modoCocinar;
 	}
 
+       /**
+       * Devuelve un robot en modo entregar
+       *
+       *@retrun modoEntregar
+       */
 	public EstadoRobot modoEntregar(){
 		return modoEntregar;
 	}
 	
+       /**
+       * Imprime los menú del restaurante
+       */
 	public void imprimeMenu(){
 		System.out.println("-> Con gusto te mostraré nuestro menú");
 		System.out.println("\n**** M E N U    G E N E R A L  ****");
@@ -103,6 +220,9 @@ public class Robot{
 		menuDeLujo();
 	}
 	
+       /**
+       * Imprime el menu general       
+       */
 	public void menuGeneral(){
 		Iterador iteradorGeneral =  menuGeneral.creaIterador();
 		while(iteradorGeneral.hasNext()){
@@ -110,6 +230,9 @@ public class Robot{
 		}
 	}
 	
+       /**
+       *Imprime el menu del dia      
+       */
 	public void menuDelDia(){
 		Iterador iteradorDelDia =  menuDelDia.creaIterador();
 		while(iteradorDelDia.hasNext()){
@@ -117,6 +240,9 @@ public class Robot{
 		}
 	}
 	
+       /**
+       * Imprime el menu de lujo      
+       */
 	public void menuDeLujo(){
 		 Iterador iteradorDeLujo =  menuDeLujo.creaIterador();
 		while(iteradorDeLujo.hasNext()){
@@ -124,20 +250,32 @@ public class Robot{
 		}
 	}
 	
-	public void orden(String id){ //guarda el id de la orden
+       /**
+       * Guarda el ID de la orden del cliente
+       *@param id
+       *       
+       */
+	public void orden(String id){ 
 		orden = id.toUpperCase();
 	}
-	
-	public void ordenDelCliente(){ //busca la hamburguesa que el cliente quiere
-		if(orden.contains("MG")){	//la hamburguesa esta el menu general
+
+	/**
+        * Método que busca la orden del cliente entre los menu
+	*
+        */
+	public void ordenDelCliente(){ 
+		if(orden.contains("MG")){	
 			buscarMenuGeneral();
-		}else if(orden.contains("MD")){	 //la hamburguesa esta en el menu del dia
+		}else if(orden.contains("MD")){	
 			buscarMenuDelDia();
-		}else if(orden.contains("ML")){ //la hamburguesa esta es del menu de lujo
+		}else if(orden.contains("ML")){ 
 			buscarMenuDeLujo(); 
 		}
 	}
 
+       /**
+       * Busca la orden del cliente en el menu general    
+       */
 	public void buscarMenuGeneral(){
 		Hamburguesa h;
 		String id="";
@@ -151,6 +289,9 @@ public class Robot{
 			}	
 	}
 	
+       /**
+       *Busca la orden del cliente en el menu del dia   
+       */
 	public void buscarMenuDelDia(){
 		Hamburguesa h;
 		String id="";
@@ -165,6 +306,9 @@ public class Robot{
 		
 	}
 	
+       /**
+       *Busca la orden del cliente en el menu de lujo      
+       */
 	public void buscarMenuDeLujo(){
 		Hamburguesa h;
 		String id="";
@@ -178,7 +322,12 @@ public class Robot{
 			}	
 	}
 	
-	public Hamburguesa obtenerPedido(){ //devuelve la hamburguesa que quiere el cliente
+       /**
+       * Metodo que devulve la hamburguesa que le cliente ordenó
+       * @return burguerCliente      
+       */
+
+	public Hamburguesa obtenerPedido(){
 		return burgerCliente;
 	}
 }
