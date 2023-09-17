@@ -11,7 +11,7 @@ public class MenuGeneral implements Menu{
 	/**
 	* Estructura de datos para el menu general
 	*/
-	private Hamburguesa[] menuGeneral = new Hamburguesa[3];
+	protected Hamburguesa[] menuGeneral = new Hamburguesa[3];
 	/**
 	* Posicion actual del arreglo
 	*/
@@ -24,9 +24,9 @@ public class MenuGeneral implements Menu{
 	public MenuGeneral(){
 	 	Hamburguesa h1 = new HamburguesaVegetariana("MG01", "Hamburguesa Azuki", "Pan integral, mayonesa estilo japonés, carne de arroz integral mezclado con judías azuki y trozos de alga kombu, mostaza, catsup, pepinillos y setas hervidas", 60.0, false, true, "judias azuki");
 		agregarHamburguesa(h1);
-		Hamburguesa h2 = new HamburguesaCarnivora("MG02", "McBurguesa tradicional", "Pan blando, mayonesa tradicional, carne de cerdo a tres cuartos, lechuga freca, queso amarillo, mostaza y catsup", 45.0, true, false, "cerdo");
+		Hamburguesa h2 = new HamburguesaCarnivora("MG02", "McBurguesa tradicional", "Pan blando, mayonesa tradicional, carne de cerdo a tres cuartos, lechuga fresca, queso amarillo, mostaza y catsup", 45.0, true, false, "cerdo");
 		agregarHamburguesa(h2);
-		Hamburguesa h3 = new HamburguesaCarnivora("MG03", "nombre", "descripcion", 50.0, false, false, "carne");
+		Hamburguesa h3 = new HamburguesaCarnivora("MG03", "Hamburguesa Eso Brad", "Pan de cristal, aderezo de mayonesa con mostaza dulce, carne de res bien cocida, aros de cebolla empanizados, tocino, pepinillos y un toque de salsa inglesa ", 50.0, false, false, "res");
 		agregarHamburguesa(h3);
 	}
 	
