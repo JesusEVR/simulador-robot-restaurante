@@ -23,7 +23,7 @@ public class MenuDeLujo implements Menu{
 		agregarHamburguesa(h1.obtenerID(), (Object) h1);	
 		Hamburguesa h2 = new HamburguesaCarnivora("ML02", "Hamburguesa dos torres", "Pan rústico, mayonesa al ajo de la casa, colchon de lechuga y jitomate fresco, doble carne de ternera, pepinillos, mostaza, catsup, cebollla caramelizada", 78.0, false, false, "ternera");
 		agregarHamburguesa(h2.obtenerID(), (Object) h2);	
-		Hamburguesa h3 = new HamburguesaCarnivora("ML03", "Hamburguesa Meat Supreme", "Pan de mantequilla, mayonesa de chipotle, carne Ribeye de res bien cocida, acompañada de salchicha, tocino, chorizo molido, catsup y miel mostaza", 95.0, true, false, "Ribeye");
+		Hamburguesa h3 = new HamburguesaCarnivora("ML03", "Hamburguesa Meat Supreme", "Pan de mantequilla, mayonesa de chipotle, carne Ribeye de res bien cocida, acompañada de salchicha, queso amarillo, tocino, chorizo molido, catsup y miel mostaza", 95.0, true, false, "Ribeye");
 		agregarHamburguesa(h3.obtenerID(), (Object) h3);	
 	}
 	
