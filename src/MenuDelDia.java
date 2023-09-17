@@ -24,7 +24,7 @@ public class MenuDelDia implements Menu{
 		agregarHamburguesa((Object) h1);
 		Hamburguesa h2 = new HamburguesaCarnivora("MD02", "Hamburguesa Vacuna", "Pan tradicional, mayonesa de betabel, rodajas de jitomate abundantes, queso amarillo derretido, carne de res bien cocida, catsup y mostaza", 65.0, true, false, "res");
 		agregarHamburguesa((Object) h2);
-		Hamburguesa h3 = new HamburguesaCarnivora("MD03", "Hamburguesa Don Pollo", "Pan tradicional, mayonesa de chipotle, queso amarillo rodajas de jitomate, lechuga, carne de pollo asada, jalapeños y mostaza", 60.0, true, false, "pollo");
+		Hamburguesa h3 = new HamburguesaCarnivora("MD03", "Hamburguesa Don Pollo", "Pan tradicional, mayonesa de chipotle, queso amarillo, rodajas de jitomate, lechuga, carne de pollo asada, jalapeños y mostaza", 60.0, true, false, "pollo");
 		agregarHamburguesa((Object) h3);
 	}
 	
