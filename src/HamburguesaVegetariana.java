@@ -40,6 +40,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	 * Metodo implementado que detalla que se esta preparando la carne (vegetariana o no) de la hamburguesa
          *
 	 */
+	@Override
 	public void prepararCarne(){
 		System.out.println("--- Preparando la carne vegetariana de " +tipoCarne+ " ---");
 	}
@@ -48,6 +49,7 @@ public class HamburguesaVegetariana extends Hamburguesa{
 	 * Metodo implementado que detalla que se esta poniendo la carne (vegetariana o no) de la hamburguesa
          *
 	 */
+	@Override
 	public void ponerCarne(){
 		System.out.println("--- Poniendo la carne vegetariana de " +tipoCarne+ " ---");
 	}
