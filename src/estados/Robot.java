@@ -1,3 +1,8 @@
+package estados;
+
+import hamburguesas.*;
+import menus.*;
+
 /**
 * Clase que define el comportamiento del robot cuando es mesero o cocinero
 *

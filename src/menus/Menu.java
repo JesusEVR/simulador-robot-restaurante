@@ -1,3 +1,8 @@
+package menus;
+
+import estados.*;
+import hamburguesas.*;
+
 /**
 * Interfaz que define la característica común de los menú
 *

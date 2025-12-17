@@ -1,3 +1,8 @@
+package hamburguesas;
+
+import estados.*;
+import menus.*;
+
 /**
  * Clase que define las hamburguesas "carnivoras" (no vegetariana). Hereda de la clase absracta 'Hamburguesa'
  *

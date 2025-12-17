@@ -1,5 +1,10 @@
+package estados;
+
+import hamburguesas.*;
+import menus.*;
+
 /**
- * Clase correspondiente al Modo Entregar del Robot.
+ * Clase correspondiente al Modo Suspendido del Robot.
  * Implementa los métodos de la interfaz EstadoRobot, los cuales son las acciones que el robot puede o no hacer.
  *
  * @author Supr-Lilito
@@ -8,18 +13,18 @@
  * @version septiembre 2023
  *
  */
-public class ModoEntregar implements EstadoRobot{
+public class ModoSuspendido implements EstadoRobot{
 	/**
 	 * Robot que realizará todos las acciones y tendrá diversos estados
 	 */
 	Robot robot;
 
 	/**
-	 * Constructor por parámetros del Modo Entregar
+	 * Constructor por parámetros del Modo Suspendido
          * @param r El robot que será igual al atributo de la clase
 	 *
 	 */
-	public ModoEntregar(Robot r){
+	public ModoSuspendido(Robot r){
 		robot = r;
 	}
 
@@ -29,19 +34,20 @@ public class ModoEntregar implements EstadoRobot{
 	 *
 	 */
 	public void suspender(){
-		System.out.println("** MODO ENTREGAR **\n--- Solo puedo suspenderme hasta haberte entregado tu hamburguesa, carnalirijillo ---\n");
-
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede suspenderse de nuevo. ¿En qué pensabas?\n");
 	}
-	
+
 	/**
 	 * Metodo que activa al Robot.
 	 * Pasa automáticamente al modo Caminar.
 	 *
 	 */
 	public void activar(){
-		System.out.println("** MODO ENTREGAR **\n--- Ya estoy activo bro, no hace falta volver a activarme ---\n");
+		System.out.println("** Robot Activado **");	
+		robot.asignarNuevoEstado(robot.modoCaminar());
+		System.out.println("--- Cambiando a modo C A M I N A R ---\n");
 	}
-
+	
 	/**
 	 * Metodo que hace que el Robot se acerque a la mesa del cliente, mientras esta en modo Caminar.
 	 * Lo unico que puede hacer mientras se acerca, o camina, es suspenderse.
@@ -49,7 +55,7 @@ public class ModoEntregar implements EstadoRobot{
 	 *
 	 */
 	public void caminar(){
-		System.out.println("** MODO ENTREGAR **\n--- No hace falta que camine mas, solo debo entregarte la orden ---\n");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no puede caminar\n");
 	}
 
 	/**
@@ -59,7 +65,7 @@ public class ModoEntregar implements EstadoRobot{
 	 *
 	 */
 	public void atender(){
-		System.out.println("** MODO ENTREGAR **\n--- No puedo tomar otra orden hasta haberte entregado esta, no seas goloso ---\n");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede atender\n");
 	}
 
 	/**
@@ -69,18 +75,15 @@ public class ModoEntregar implements EstadoRobot{
 	 *
 	 */
 	public void cocinar(){
-		System.out.println("** MODO ENTREGAR **\n--- Ya cocine tu hamburguesa, solo debo entregartela---\n");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede cocinar\n");
 	}
 
 	/**
 	 * Metodo que hace que el robot entregue la hamburguesa al comensal.
-	 * Despues de entregar el pedido, regresa al modo "Suspendido"
+	 * Despues de entregar el pedido, regresa al modo "Suspendido".
 	 *
 	 */
 	public void entregar(){
-		System.out.println("--- ¡Aquí tiene su pedido, gracias por la compra! ---");
-		robot.asignarNuevoEstado(robot.modoSuspendido());
-		robot.yaCocino(false);
-		System.out.println("--- Cambiando a modo S U S P E N D I D O ---\n");
+		System.out.println("** MODO SUSPENDIDO **\nEn modo suspendido el robot no te puede entregar ordenes\n");
 	}
 }

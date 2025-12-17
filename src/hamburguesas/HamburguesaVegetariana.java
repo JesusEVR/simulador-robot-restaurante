@@ -1,3 +1,8 @@
+package hamburguesas;
+
+import estados.*;
+import menus.*;
+
 /**
  * Clase que define las hamburguesas vegetarianas. Hereda de la clase absracta 'Hamburguesa'
  *

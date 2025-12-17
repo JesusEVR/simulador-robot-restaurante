@@ -1,3 +1,8 @@
+package menus;
+
+import estados.*;
+import hamburguesas.*;
+
 /**
 * Clase que define la característica del menú general
 *

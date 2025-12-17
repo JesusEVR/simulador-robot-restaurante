@@ -1,3 +1,7 @@
+import menus.*;
+import estados.*;
+import hamburguesas.*;
+
 import java.util.Scanner;
 
 public class Principal{

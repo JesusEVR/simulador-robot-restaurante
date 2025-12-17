@@ -1,3 +1,8 @@
+package hamburguesas;
+
+import estados.*;
+import menus.*;
+
 /**
  * Clase abstracta que define de forma general las hambuguesas de 'McBurguesas'.
  *
