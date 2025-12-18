@@ -20,3 +20,12 @@ javac Principal.java
 ```
 java Principal
 ```
+
+## Autores
+
+- @paolasanv
+- @Supr-Lilito
+- @JesusEVR
+
+**Fecha:** Septiembre 2023
+**Curso:** Modelado y Programación
